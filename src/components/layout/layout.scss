@@ -1,0 +1,46 @@
+$primary-color: #191919;
+$primary-font-size: 27px;
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  color: $primary-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.landing-page {
+  &-container {
+    background: url("../../images/layout/Maggi\ Website_Homepage_1.psd.png");
+    height: 3609px;
+    max-width: 1920px;
+    margin: auto;
+  }
+
+  .main-header {
+    padding: 50px;
+    &_logo {
+      position: absolute;
+      background: url("../../images/layout/maggi_logo.png");
+      height: 220px;
+      width: 220px;
+      background-repeat: no-repeat;
+      left: 30px;
+      top: 30px;
+    }
+    &_menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      &-item {
+        line-height: 32px;
+        font-size: $primary-font-size;
+        padding: 0 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
