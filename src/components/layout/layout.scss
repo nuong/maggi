@@ -11,6 +11,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  margin-bottom: .5em;
+}
+p {
+  font-size: 1.6rem;
+  margin-bottom: .5em;
+}
 
 .landing-page {
   &-container {
@@ -22,14 +31,17 @@ body {
 
   .main-header {
     padding: 50px;
+    padding-bottom: 30px;
+    position: relative;
     &_logo {
       position: absolute;
       background: url("../../images/layout/maggi_logo.png");
-      height: 220px;
-      width: 220px;
+      height: 13.5em;
+      width: 13.5em;
+      background-size: contain;
       background-repeat: no-repeat;
-      left: 30px;
-      top: 30px;
+      left: 1.5em;
+      top: 1.5em;
     }
     &_menu {
       display: flex;

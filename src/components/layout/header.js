@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => (
     <div className="main-header">
       <div className="main-header_logo" />
       <div className="main-header_menu">
-        {header_data.map((item) => (
-          <div className="main-header_menu-item">
+        {header_data.map((item, index) => (
+          <div className="main-header_menu-item" key={index}>
             <span>{item.title}</span>
           </div>
         ))}
