@@ -1,0 +1,113 @@
+.main-carousel {
+  .columns {
+    margin: 0;
+  }
+  .content {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &-balance-bowl {
+    width: 93%;
+    height: 50em;
+    position: relative;
+    &-carbohydrates {
+      height: 100%;
+      background: url("../../images/layout/carbohydrates_circle_base.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      -webkit-transition: background-image 0.2s ease-in-out;
+      transition: background-image 0.2s ease-in-out;
+      &.active {
+        height: 111%;
+        background: url("../../images/layout/carbohydrates.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
+
+    }
+    &-protein {
+      height: 100%;
+      background: url("../../images/layout/protein_circle_base.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      -webkit-transition: background-image 0.2s ease-in-out;
+      transition: background-image 0.2s ease-in-out;
+      &.active {
+        background: url("../../images/layout/protein.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: right;
+      }
+    }
+    &-vegetable {
+      height: 100%;
+      background: url("../../images/layout/vegetables_circle_base.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-transition: background-image 0.2s ease-in-out;
+      transition: background-image 0.2s ease-in-out;
+      &.active {
+        background: url("../../images/layout/vegetable.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+    &-full {
+      position: absolute;
+      background: url("../../images/layout/balanced\ bowl.png");
+      height: 45em;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 45em;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .left-arrow {
+    position: absolute;
+    background: url("../../images/layout/left_arrow.png");
+    height: 2em;
+    width: 2em;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 50%;
+    left: -6em;
+    transform: translateY(-50%);
+  }
+
+  .right-arrow {
+    position: absolute;
+    background: url("../../images/layout/right_arrow.png");
+    height: 2em;
+    width: 2em;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    top: 50%;
+    right: 2em;
+    transform: translateY(-50%);
+}
+
+  &-step {
+    padding: 2.7vw;
+    height: 100%;
+    padding-top: 9.5vw;
+    padding-right: 6vw;
+    padding-left: 0;
+    position: relative;
+    .carousel .slide {
+      background: unset;
+    }
+  }
+
+
+}
