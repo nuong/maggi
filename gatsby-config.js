@@ -14,11 +14,11 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`,
 		{
 			resolve: 'gatsby-plugin-sass',
 			options: {
-				data: `@import "${__dirname}/src/style/app";`,
+				data: `@import "src/style/app";`,
 			}
 		},
 		{
