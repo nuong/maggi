@@ -3,6 +3,8 @@ import SEO from "../components/layout/seo";
 import React, { Component } from "react";
 import { MAKE_BALANCEC_BOWL_LANG as lang } from "../language/en";
 import MbbStepOne from "../components/mbb-steps/mbb-stepone";
+import MbbStepTwo from "../components/mbb-steps/mbb-steptwo";
+import MbbStepThree from "../components/mbb-steps/mbb-stepthree";
 import bgImage from "../images/make-balanced-bowl/mbb-bg-1-op.png";
 
 const STEPS = [
@@ -43,6 +45,12 @@ export default class MakeBalancedBowlPage extends Component {
   onSelectStep1 = (index) => {
     this.updateActiveStep(1, index);
   };
+  onSelectStep2 = (index) => {
+    this.updateActiveStep(2, index);
+  };
+  onSelectStep3 = (index) => {
+    this.updateActiveStep(3, index);
+  };
   updateActiveStep = (step, stepIndex) => {
     const { activeStep } = this.state;
     let selection = activeStep.selectedItem[step];
@@ -82,7 +90,7 @@ export default class MakeBalancedBowlPage extends Component {
             {lang.INTRO_TITLE}
             <h2 className="sub-title">{lang.INTRO_BIG_TITLE}</h2>
             <p>{lang.INTRO_DES}</p>
-            <button className="btn-primary" onClick={this.nextStep}>
+            <button className="btn btn-primary" onClick={this.nextStep}>
               {lang.START_NOW}
             </button>
             <p className="caption">{lang.INTRO_HINT}</p>
@@ -98,10 +106,10 @@ export default class MakeBalancedBowlPage extends Component {
               selectHandle={this.onSelectStep1}
             />
             <div className="">
-              <button className="btn-primary" onClick={this.backStep}>
+              <button className="btn mr-10" onClick={this.backStep}>
                 {lang.BACK}
               </button>
-              <button className="btn-primary" onClick={this.nextStep}>
+              <button className="btn btn-primary" onClick={this.nextStep}>
                 {lang.NEXT}
               </button>
             </div>
@@ -111,11 +119,16 @@ export default class MakeBalancedBowlPage extends Component {
         return (
           <div>
             <p>{lang.STEP2_TITLE}</p>
+            <MbbStepTwo
+              lang={lang}
+              selection={this.state.activeStep.selectedItem["2"]}
+              selectHandle={this.onSelectStep2}
+            />
             <div className="">
-              <button className="btn-primary" onClick={this.backStep}>
+              <button className="btn mr-10" onClick={this.backStep}>
                 {lang.BACK}
               </button>
-              <button className="btn-primary" onClick={this.nextStep}>
+              <button className="btn btn-primary" onClick={this.nextStep}>
                 {lang.NEXT}
               </button>
             </div>
@@ -125,11 +138,16 @@ export default class MakeBalancedBowlPage extends Component {
         return (
           <div>
             <p>{lang.STEP3_TITLE}</p>
+            <MbbStepThree
+              lang={lang}
+              selection={this.state.activeStep.selectedItem["3"]}
+              selectHandle={this.onSelectStep3}
+            />
             <div className="">
-              <button className="btn-primary" onClick={this.backStep}>
+              <button className="btn mr-10" onClick={this.backStep}>
                 {lang.BACK}
               </button>
-              <button className="btn-primary" onClick={this.nextStep}>
+              <button className="btn btn-primary" onClick={this.nextStep}>
                 {lang.NEXT}
               </button>
             </div>

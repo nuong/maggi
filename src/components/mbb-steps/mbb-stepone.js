@@ -10,27 +10,23 @@ const MbbStepOne = ({ selection, selectHandle, lang }) => {
 	const wrapStyle = {
 		display: 'flex',
 	}
-	const activeStyle = {
-		backgroundImage: `url(${bgStep})`,
+	const options = {
+		1: imgOp1,
+		2: imgOp2,
+		3: imgOp3
 	}
 	return (
 		<div className="stepx-wp step1-wrapper" style={wrapStyle}>
-			<div className="__item" onClick={() => selectHandle(1)} style={selection.indexOf(1) > -1 ? activeStyle : {}}>
-				<img src={imgOp1} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP1_TITLE }}>
+			{
+				[1, 2, 3].map(index => (
+					<div key={index} className={`__item ${selection.indexOf(index) > -1 ? 'active' : ''}`} onClick={() => selectHandle(index)} >
+						<img src={options[index]} alt=""></img>
+						<span dangerouslySetInnerHTML={{ __html: lang[`STEP1_OP${index}_TITLE`] }}>
 
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(2)} style={selection.indexOf(2) > -1 ? activeStyle : {}}>
-				<img src={imgOp2} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP2_TITLE }}>
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(3)} style={selection.indexOf(3) > -1 ? activeStyle : {}}>
-				<img src={imgOp3} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP3_TITLE }}>
-				</span>
-			</div>
+						</span>
+					</div>
+				))
+			}
 		</div>
 	);
 }

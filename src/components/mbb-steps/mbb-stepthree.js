@@ -4,33 +4,43 @@ import React from "react"
 import imgOp1 from "../../images/make-balanced-bowl/step3/1.png";
 import imgOp2 from "../../images/make-balanced-bowl/step3/2.png";
 import imgOp3 from "../../images/make-balanced-bowl/step3/3.png";
+import imgOp4 from "../../images/make-balanced-bowl/step3/4.png";
+import imgOp5 from "../../images/make-balanced-bowl/step3/5.png";
+import imgOp6 from "../../images/make-balanced-bowl/step3/6.png";
+import imgOp7 from "../../images/make-balanced-bowl/step3/7.png";
+import imgOp8 from "../../images/make-balanced-bowl/step3/8.png";
+import imgOp9 from "../../images/make-balanced-bowl/step3/9.png";
+import imgOp10 from "../../images/make-balanced-bowl/step3/10.png";
 import bgStep from "../../images/make-balanced-bowl/step3/bg.png"
 
 const MbbStepThree = ({ selection, selectHandle, lang }) => {
 	const wrapStyle = {
 		display: 'flex',
 	}
-	const activeStyle = {
-		backgroundImage: `url(${bgStep})`,
+	const options = {
+		1: imgOp1,
+		2: imgOp2,
+		3: imgOp3,
+		4: imgOp4,
+		5: imgOp5,
+		6: imgOp6,
+		7: imgOp7,
+		8: imgOp8,
+		9: imgOp9,
+		10: imgOp10,
 	}
 	return (
 		<div className="stepx-wp step3-wrapper" style={wrapStyle}>
-			<div className="__item" onClick={() => selectHandle(1)} style={selection.indexOf(1) > -1 ? activeStyle : {}}>
-				<img src={imgOp1} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP1_TITLE }}>
+			{
+				[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => (
+					<div key={index} className={`__item ${selection.indexOf(index) > -1 ? 'active' : ''}`} onClick={() => selectHandle(index)} >
+						<img src={options[index]} alt=""></img>
+						<span dangerouslySetInnerHTML={{ __html: lang[`STEP3_OP${index}_TITLE`] }}>
 
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(2)} style={selection.indexOf(2) > -1 ? activeStyle : {}}>
-				<img src={imgOp2} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP2_TITLE }}>
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(3)} style={selection.indexOf(3) > -1 ? activeStyle : {}}>
-				<img src={imgOp3} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP3_TITLE }}>
-				</span>
-			</div>
+						</span>
+					</div>
+				))
+			}
 		</div>
 	);
 }

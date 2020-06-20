@@ -20,18 +20,27 @@ button {
   outline: none !important;
 }
 
-.btn-primary {
+.btn {
   height: 40px;
   display: inline-flex;
   align-items: center;
   padding: 0 15px;
-  background-color: orange;
-  color: #fff;
   font-weight: 600;
   transition: all 0.3s ease-in;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+.btn-default {
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: orange;
+  color: #fff;
   &:hover {
     background-color: rgba(255, 165, 0, 0.82);
   }

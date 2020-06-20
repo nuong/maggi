@@ -1,47 +1,49 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import imgOp1 from "../../images/make-balanced-bowl/step1/1.png";
-import imgOp2 from "../../images/make-balanced-bowl/step1/2.png";
-import imgOp3 from "../../images/make-balanced-bowl/step1/3.png";
-import bgStep from "../../images/make-balanced-bowl/step1/bg.png"
+import imgOp1 from "../../images/make-balanced-bowl/step2/1.png";
+import imgOp2 from "../../images/make-balanced-bowl/step2/2.png";
+import imgOp3 from "../../images/make-balanced-bowl/step2/3.png";
+import imgOp4 from "../../images/make-balanced-bowl/step2/4.png";
+import imgOp5 from "../../images/make-balanced-bowl/step2/5.png";
+import imgOp6 from "../../images/make-balanced-bowl/step2/6.png";
+import bgStep from "../../images/make-balanced-bowl/step2/bg.png"
 
-const MbbStepOne = ({ selection, selectHandle, lang }) => {
+const MbbStepTwo = ({ selection, selectHandle, lang }) => {
 	const wrapStyle = {
 		display: 'flex',
 	}
-	const activeStyle = {
-		backgroundImage: `url(${bgStep})`,
+	const options = {
+		1: imgOp1,
+		2: imgOp2,
+		3: imgOp3,
+		4: imgOp4,
+		5: imgOp5,
+		6: imgOp6,
 	}
 	return (
-		<div className="stepx-wp step1-wrapper" style={wrapStyle}>
-			<div className="__item" onClick={() => selectHandle(1)} style={selection.indexOf(1) > -1 ? activeStyle : {}}>
-				<img src={imgOp1} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP1_TITLE }}>
+		<div className="stepx-wp step2-wrapper" style={wrapStyle}>
+			{
+				[1, 2, 3, 4, 5, 6].map(index => (
+					<div key={index} className={`__item ${selection.indexOf(index) > -1 ? 'active' : ''}`} onClick={() => selectHandle(index)} >
+						<img src={options[index]} alt=""></img>
+						<span dangerouslySetInnerHTML={{ __html: lang[`STEP2_OP${index}_TITLE`] }}>
 
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(2)} style={selection.indexOf(2) > -1 ? activeStyle : {}}>
-				<img src={imgOp2} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP2_TITLE }}>
-				</span>
-			</div>
-			<div className="__item" onClick={() => selectHandle(3)} style={selection.indexOf(3) > -1 ? activeStyle : {}}>
-				<img src={imgOp3} alt=""></img>
-				<span dangerouslySetInnerHTML={{ __html: lang.STEP1_OP3_TITLE }}>
-				</span>
-			</div>
+						</span>
+					</div>
+				))
+			}
 		</div>
 	);
 }
 
-MbbStepOne.propTypes = {
+MbbStepTwo.propTypes = {
 	selection: PropTypes.array,
 	selectHandle: PropTypes.func
 }
 
-MbbStepOne.defaultProps = {
+MbbStepTwo.defaultProps = {
 	selection: [],
 }
 
-export default MbbStepOne
+export default MbbStepTwo

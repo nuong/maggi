@@ -46,17 +46,49 @@
             justify-content: center;
             justify-items: center;
             background-position: center;
+            transition: all 0.3s ease-in;
+            &.active {
+              //   background-color: papayawhip;
+            }
           }
         }
         .step1-wrapper {
           .__item {
             padding: 35px;
+            &.active {
+              background-image: url(../../images/make-balanced-bowl/step1/bg.png);
+            }
             img {
               //   width: 100px;
             }
           }
         }
+        .step2-wrapper {
+          .__item {
+            width: 150px;
+            height: 150px;
+            margin: 5px;
+            &.active {
+              background-image: url(../../images/make-balanced-bowl/step2/bg.png);
+            }
+            img {
+              width: 80px;
+            }
+          }
+        }
         .step3-wrapper {
+          flex-wrap: wrap;
+          .__item {
+            width: 150px;
+            margin: 5px;
+            padding: 15px;
+            &.active {
+              background-image: url(../../images/make-balanced-bowl/step3/bg.png);
+            }
+            img {
+              width: 80px;
+            }
+          }
         }
       }
     }
