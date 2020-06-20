@@ -2,12 +2,13 @@ import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import './styles.scss';
+import './step.scss';
 
-const Step_1 = () => {
+const Full_Bowl = () => {
   return (
     <>
       <h1>Serve your family Balanced Bowls!</h1>
-      <p>
+      <p style={{marginBottom: '1em'}}>
         This visual guide aims to help you create wholesome Balanced Bowls using
         MAGGI® noodles and a variety of fresh ingredients for your family from
         the comfort of your own home.
@@ -17,7 +18,97 @@ const Step_1 = () => {
   );
 }
 
+const Step_1 = () => {
+  return (
+    <>
+      <h1>Step 1</h1>
+      <p>
+        Pick your favourite MAGGI® Noodle as your carbohydrate-of-choice
+      </p>
+      <div className="columns steps">
+        <span className="steps-equal">=</span>
+        <div className="column is-6-widescreen is-6-fullhd step">
+          <div className="step-1-1"></div>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <div className="step-1-2"></div>
+        </div>
+      </div>
+      <div className="columns is-gapless">
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">1 fistful</span>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">1 packet</span>
+        </div>
+      </div>
+      <p className="description">
+        Serving sizes are just suggested approximate proportions of food you can
+        include on your plate. <span>Find out more.</span>
+      </p>
+    </>
+  );
+};
 
+const Step_2 = () => {
+  return (
+    <>
+      <h1>Step 2</h1>
+      <p style={{padding: '0 4em'}}>Pick protein to add to your noodles</p>
+      <div className="columns steps">
+        <span className="steps-equal">=</span>
+        <div className="column is-6-widescreen is-6-fullhd step">
+          <div className="step-2-1"></div>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <div className="step-2-2"></div>
+        </div>
+      </div>
+      <div className="columns is-gapless">
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">1 palm size</span>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">protein</span>
+        </div>
+      </div>
+      <p className="description">
+        Serving sizes are just suggested approximate proportions of food you can
+        include on your plate. <span>Find out more.</span>
+      </p>
+    </>
+  );
+};
+
+const Step_3 = () => {
+  return (
+    <>
+      <h1>Step 3</h1>
+      <p style={{ padding: "0 4em" }}>Pick vegetables to add to your noodles</p>
+      <div className="columns steps">
+        <span className="steps-equal">=</span>
+        <div className="column is-6-widescreen is-6-fullhd step" style={{padding: '.5em 2em'}}>
+          <div className="step-3-1"></div>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <div className="step-3-2"></div>
+        </div>
+      </div>
+      <div className="columns is-gapless">
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">1 handful</span>
+        </div>
+        <div className="column is-6-widescreen is-6-fullhd">
+          <span className="sub-title">vegetables</span>
+        </div>
+      </div>
+      <p className="description">
+        Serving sizes are just suggested approximate proportions of food you can
+        include on your plate. <span>Find out more.</span>
+      </p>
+    </>
+  );
+};
 
 export default class CarouselSection extends React.PureComponent {
   state = {
@@ -121,28 +212,39 @@ export default class CarouselSection extends React.PureComponent {
               ></span>
               <div>
                 <Carousel
-                  autoPlay={true}
-                  infiniteLoop={true}
+                  autoPlay={false}
+                  infiniteLoop
                   statusFormatter={() => ""}
                   showIndicators={false}
                   showArrows={false}
                   showThumbs={false}
                   selectedItem={this.state.currentSlide}
                   onChange={this.updateCurrentSlide}
+                  style={{ height: 500 }}
                 >
-                  <div>
+                  <div key="slide1">
+                    <Full_Bowl />
+                  </div>
+                  <div key="slide2">
                     <Step_1 />
                   </div>
-                  <div>
-                    <Step_1 />
+                  <div key="slide3">
+                    <Step_2 />
                   </div>
-                  <div>
-                    <Step_1 />
-                  </div>
-                  <div>
-                    <Step_1 />
+                  <div key="slide4">
+                    <Step_3 />
                   </div>
                 </Carousel>
+                <div className="indicator-wrapper">
+                  <span className="indicator">•</span>
+                  <span className="indicator">•</span>
+                  <span className="indicator">•</span>
+                  <span className="indicator">•</span>
+                </div>
+                <button className="button is-primary make-balance-bowl-button">
+                  Make a Balanced Bowl
+                </button>
+                <p>View our Recipes</p>
               </div>
             </div>
           </div>
