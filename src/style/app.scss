@@ -1,0 +1,38 @@
+$primary-color: #191919;
+$primary-font-size: 27px;
+
+$title-size: 2.5rem;
+$subtitle-size: 2rem;
+$caption-size: 0.75rem;
+$text-size: 1rem;
+
+.caption {
+  font-size: $caption-size;
+}
+.title {
+  font-size: $title-size;
+}
+.sub-title {
+  font-size: $subtitle-size;
+}
+
+button {
+  outline: none !important;
+}
+
+.btn-primary {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: orange;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 165, 0, 0.82);
+  }
+}

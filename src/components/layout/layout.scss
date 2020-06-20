@@ -14,11 +14,11 @@ body {
 h1 {
   font-size: 3rem;
   line-height: 4rem;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 p {
   font-size: 1.6rem;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .landing-page {
@@ -28,31 +28,30 @@ p {
     max-width: 1920px;
     margin: auto;
   }
-
-  .main-header {
-    padding: 50px;
-    padding-bottom: 30px;
-    position: relative;
-    &_logo {
-      position: absolute;
-      background: url("../../images/layout/maggi_logo.png");
-      height: 13.5em;
-      width: 13.5em;
-      background-size: contain;
-      background-repeat: no-repeat;
-      left: 1.5em;
-      top: 1.5em;
-    }
-    &_menu {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      &-item {
-        line-height: 32px;
-        font-size: $primary-font-size;
-        padding: 0 20px;
-        cursor: pointer;
-      }
+}
+.main-header {
+  padding: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  &_logo {
+    position: absolute;
+    background: url("../../images/layout/maggi_logo.png");
+    height: 13.5em;
+    width: 13.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 1.5em;
+    top: 1.5em;
+  }
+  &_menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &-item {
+      line-height: 32px;
+      font-size: $primary-font-size;
+      padding: 0 20px;
+      cursor: pointer;
     }
   }
 }

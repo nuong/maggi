@@ -7,31 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "bulma/css/bulma.css";
 import "./layout.scss"
+import "./mbb-style.scss"
 
 const Layout = ({ children }) => {
-	const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
 	return (
-		<div className="landing-page">
-			<div className="landing-page-container">
-				<Header siteTitle={data.site.siteMetadata.title} />
-				<div className="landing-page-container_main-content">
-					<main>{children}</main>
-				</div>
-			</div>
+		<div className="mbb-wrapper">
+			<Header siteTitle="Make a balanced bowl" />
+			<main>{children}</main>
 		</div>
 	);
 }

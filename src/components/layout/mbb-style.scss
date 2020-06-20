@@ -1,0 +1,64 @@
+.mbb-wrapper {
+  position: relative;
+  color: $primary-color;
+  font-size: $text-size;
+  .main-header {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  .mbb-main-content {
+    min-height: 100vh;
+    background-size: cover;
+    .step-content-wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+      padding-top: 130px;
+      .step-header {
+        width: 100%;
+        height: 185px;
+        background-image: url("../../images/make-balanced-bowl/step-bg-op.png");
+        background-size: contain;
+        text-align: center;
+        padding: 25px;
+        margin-bottom: 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        ul li {
+          display: inline-block;
+        }
+      }
+      .step-content {
+        text-align: center;
+        width: 100%;
+        .stepx-wp {
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 2rem;
+          margin-top: 2rem;
+          .__item {
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            background-position: center;
+          }
+        }
+        .step1-wrapper {
+          .__item {
+            padding: 35px;
+            img {
+              //   width: 100px;
+            }
+          }
+        }
+        .step3-wrapper {
+        }
+      }
+    }
+  }
+}
