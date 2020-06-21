@@ -14,6 +14,7 @@ h1 {
   font-size: 3rem;
   line-height: 4rem;
   margin-bottom: 0.5em;
+  font-weight: 500;
 }
 p {
   font-size: 1.6rem;
@@ -23,8 +24,10 @@ p {
 .landing-page {
   &-container {
     background: url("../../images/layout/Maggi\ Website_Homepage_1.psd.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 3609px;
-    max-width: 1920px;
+    width: 1920px;
     margin: auto;
   }
 }
@@ -53,4 +56,8 @@ p {
       cursor: pointer;
     }
   }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+
 }

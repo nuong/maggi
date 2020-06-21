@@ -1,0 +1,37 @@
+.why-maggi {
+  padding: 17em;
+  padding-bottom: 0;
+  text-align: center;
+  &-content {
+    padding: 1em 8em;
+  }
+}
+
+.custom-box {
+  padding-left: 10em;
+  padding-right: 0;
+  &-item {
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 1;
+    }
+    .box-container {
+      z-index: 2;
+      position: relative;
+      padding: 2em;
+      text-align: center;
+      &-content{
+        img {
+          position: relative;
+          margin-bottom: 2em;
+        }
+        p {
+          padding: 0 2.2em;
+          line-height: 1.3em;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

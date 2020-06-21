@@ -212,15 +212,15 @@ export default class CarouselSection extends React.PureComponent {
               ></span>
               <div>
                 <Carousel
-                  autoPlay={false}
+                  autoPlay={true}
                   infiniteLoop
+                  swipeable
                   statusFormatter={() => ""}
                   showIndicators={false}
                   showArrows={false}
                   showThumbs={false}
                   selectedItem={this.state.currentSlide}
                   onChange={this.updateCurrentSlide}
-                  style={{ height: 500 }}
                 >
                   <div key="slide1">
                     <Full_Bowl />
@@ -241,7 +241,7 @@ export default class CarouselSection extends React.PureComponent {
                   <span className="indicator">•</span>
                   <span className="indicator">•</span>
                 </div>
-                <button className="button is-primary make-balance-bowl-button">
+                <button className="button btn-primary">
                   Make a Balanced Bowl
                 </button>
                 <p>View our Recipes</p>
