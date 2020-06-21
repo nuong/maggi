@@ -1,14 +1,18 @@
-import React from "react"
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import './styles.scss';
-import './step.scss';
+// import { Carousel } from "react-responsive-carousel";
+
+import "./styles.scss";
+import "./step.scss";
+
+const { Carousel } =
+  typeof window !== `undefined` ? require("react-responsive-carousel") : {};
 
 const Full_Bowl = () => {
   return (
     <>
       <h1>Serve your family Balanced Bowls!</h1>
-      <p style={{marginBottom: '1em'}}>
+      <p style={{ marginBottom: "1em" }}>
         This visual guide aims to help you create wholesome Balanced Bowls using
         MAGGI® noodles and a variety of fresh ingredients for your family from
         the comfort of your own home.
@@ -16,15 +20,13 @@ const Full_Bowl = () => {
       <p>Swipe right to find out how!</p>
     </>
   );
-}
+};
 
 const Step_1 = () => {
   return (
     <>
       <h1>Step 1</h1>
-      <p>
-        Pick your favourite MAGGI® Noodle as your carbohydrate-of-choice
-      </p>
+      <p>Pick your favourite MAGGI® Noodle as your carbohydrate-of-choice</p>
       <div className="columns steps">
         <span className="steps-equal">=</span>
         <div className="column is-6-widescreen is-6-fullhd step">
@@ -54,7 +56,7 @@ const Step_2 = () => {
   return (
     <>
       <h1>Step 2</h1>
-      <p style={{padding: '0 4em'}}>Pick protein to add to your noodles</p>
+      <p style={{ padding: "0 4em" }}>Pick protein to add to your noodles</p>
       <div className="columns steps">
         <span className="steps-equal">=</span>
         <div className="column is-6-widescreen is-6-fullhd step">
@@ -87,7 +89,10 @@ const Step_3 = () => {
       <p style={{ padding: "0 4em" }}>Pick vegetables to add to your noodles</p>
       <div className="columns steps">
         <span className="steps-equal">=</span>
-        <div className="column is-6-widescreen is-6-fullhd step" style={{padding: '.5em 2em'}}>
+        <div
+          className="column is-6-widescreen is-6-fullhd step"
+          style={{ padding: ".5em 2em" }}
+        >
           <div className="step-3-1"></div>
         </div>
         <div className="column is-6-widescreen is-6-fullhd">
@@ -113,7 +118,7 @@ const Step_3 = () => {
 export default class CarouselSection extends React.PureComponent {
   state = {
     currentSlide: 0,
-  }
+  };
   next = () => {
     const { currentSlide } = this.state;
     let index = currentSlide + 1;
@@ -147,15 +152,16 @@ export default class CarouselSection extends React.PureComponent {
   };
 
   render() {
+    if (typeof window === "undefined") return null;
     let isDisplayProtein = false;
     let isDisplayCarbon = false;
     let isDisplayVege = false;
-    const {currentSlide} = this.state;
-    if(currentSlide === 0) {
+    const { currentSlide } = this.state;
+    if (currentSlide === 0) {
       isDisplayProtein = true;
       isDisplayCarbon = true;
       isDisplayVege = true;
-    } else if(currentSlide === 1) {
+    } else if (currentSlide === 1) {
       isDisplayCarbon = true;
     } else if (currentSlide === 2) {
       isDisplayProtein = true;

@@ -11,7 +11,6 @@ import imgOp7 from "../../images/make-balanced-bowl/step3/7.png";
 import imgOp8 from "../../images/make-balanced-bowl/step3/8.png";
 import imgOp9 from "../../images/make-balanced-bowl/step3/9.png";
 import imgOp10 from "../../images/make-balanced-bowl/step3/10.png";
-import bgStep from "../../images/make-balanced-bowl/step3/bg.png"
 
 const MbbStepThree = ({ selection, selectHandle, lang }) => {
 	const wrapStyle = {

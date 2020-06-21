@@ -1,6 +1,6 @@
 $primary-color: #191919;
 $primary-font-size: 27px;
-$active-color: #EDA11C;
+$active-color: #eda11c;
 $title-size: 2.5rem;
 $subtitle-size: 2rem;
 $caption-size: 0.75rem;
@@ -39,12 +39,7 @@ button {
 }
 
 .btn-primary {
-  font-size: 25px;
-  font-weight: 500;
-  padding: 20px 2em;
-  margin: 1em;
   background-color: $active-color;
-  border-radius: 20px;
   color: #fff;
   &:hover {
     background-color: rgba(255, 165, 0, 0.82);

@@ -90,7 +90,42 @@
             }
           }
         }
+        .step-final {
+          position: relative;
+          .result-img {
+            position: absolute;
+            left: -150px;
+            top: -20px;
+            z-index: 1;
+            img {
+              width: 640px;
+            }
+          }
+          .result-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+            transform: translateX(150px);
+            .result-selection {
+              width: 100%;
+              height: 55vh;
+              margin-bottom: 2rem;
+              background-color: #fffcf5;
+              /* align-self: flex-end; */
+              margin-top: 20px;
+            }
+            .result-calc {
+              width: 80%;
+              height: 200px;
+              background-color: #fffcf5;
+            }
+          }
+        }
       }
+    }
+    .final-action {
+      padding: 75px 0;
     }
   }
 }

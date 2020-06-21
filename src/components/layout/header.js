@@ -23,7 +23,10 @@ const header_data = [
 const Header = ({ siteTitle }) => (
 	<header>
 		<div className="main-header">
-			<div className="main-header_logo" />
+			<Link to="/">
+				<div className="main-header_logo" />
+			</Link>
+
 			<div className="main-header_menu">
 				{header_data.map((item, index) => (
 					<div className="main-header_menu-item" key={index}>

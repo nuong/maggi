@@ -1,51 +1,71 @@
-import React from 'react';
-import './styles.scss';
+import React from "react";
+import "./styles.scss";
 import baseBox from "../../images/why-maggi/base box.png";
 import baseBox2 from "../../images/why-maggi/base box2.png";
-import icon1 from "../../images/why-maggi/icon 1.png"
-import icon2 from "../../images/why-maggi/icon 2.png"
-import convenience from "../../images/why-maggi/convenience icon.png"
+import icon1 from "../../images/why-maggi/icon 1.png";
+import icon2 from "../../images/why-maggi/icon 2.png";
+import convenience from "../../images/why-maggi/convenience icon.png";
 
 export default class MaggiSectionComponent extends React.PureComponent {
-  state = {}
+  state = {};
 
   render() {
     return (
       <>
-        <div className="why-maggi">
+        <div className="why-maggi" id="why-maggi">
           <h1>Why MAGGI®?</h1>
           <p className="why-maggi-content">
-            MAGGI® 2-Minute Noodles are carbohydrate-rich foods like rice, cereal and potato that can be used to paper balanced dishes for your family! Apart from the delicious taste and aroma that you know and love, you can also enjoy the following benefits of cooking with MAGGI® 2-Minute Noodles:
-        </p>
+            MAGGI® 2-Minute Noodles are carbohydrate-rich foods like rice,
+            cereal and potato that can be used to paper balanced dishes for your
+            family! Apart from the delicious taste and aroma that you know and
+            love, you can also enjoy the following benefits of cooking with
+            MAGGI® 2-Minute Noodles:
+          </p>
         </div>
-        <div className="columns" style={{margin: 0}}>
-          <div className="column is-8-widescreen is-8-fullhd" style={{ width: '64%'}}>
+        <div className="columns" style={{ margin: 0 }}>
+          <div
+            className="column is-8-widescreen is-8-fullhd"
+            style={{ width: "64%" }}
+          >
             <div className="custom-box">
               <div className="custom-box-item">
-                <img src={baseBox} alt=""/>
+                <img src={baseBox} alt="" />
                 <div className="box-container">
-                  <p style={{fontSize: '2em'}}>Selected Ingredients</p>
+                  <p style={{ fontSize: "2em" }}>Selected Ingredients</p>
                   <div className="columns">
-                    <div className="column is-6 box-container-content" >
+                    <div className="column is-6 box-container-content">
                       <img src={icon1} alt="" />
-                      <p>MAGGI® Noodles are made from 100% Australian Wheat with a good source of protein</p>
+                      <p>
+                        MAGGI® Noodles are made from 100% Australian Wheat with
+                        a good source of protein
+                      </p>
                     </div>
-                    <div className="column is-6 box-container-content" >
+                    <div className="column is-6 box-container-content">
                       <img src={icon2} alt="" />
-                      <p>MAGGI®’s signature tastemakers are made from only the best selected ingredients to enhance the flavour profiles of your noodles</p>
+                      <p>
+                        MAGGI®’s signature tastemakers are made from only the
+                        best selected ingredients to enhance the flavour
+                        profiles of your noodles
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="column is-4-widescreen is-4-fullhd" style={{paddingBottom: '1.5em'}}>
-            <div className="custom-box-item" style={{paddingRight: '8em', height: '100%'}}>
-              <img src={baseBox2} alt="" style={{height: '100%'}} />
+          <div
+            className="column is-4-widescreen is-4-fullhd"
+            style={{ paddingBottom: "1.5em" }}
+          >
+            <div
+              className="custom-box-item"
+              style={{ paddingRight: "8em", height: "100%" }}
+            >
+              <img src={baseBox2} alt="" style={{ height: "100%" }} />
               <div className="box-container">
-                <p style={{ fontSize: '2em' }}>Convenience</p>
+                <p style={{ fontSize: "2em" }}>Convenience</p>
                 <div className="box-container-content">
-                  <img src={convenience} alt="" style={{marginTop: '2em'}} />
+                  <img src={convenience} alt="" style={{ marginTop: "2em" }} />
                   <p>MAGGI® Noodles can be prepared within 2-minutes</p>
                 </div>
               </div>
@@ -53,6 +73,6 @@ export default class MaggiSectionComponent extends React.PureComponent {
           </div>
         </div>
       </>
-    )
+    );
   }
 }

@@ -5,7 +5,9 @@ import { MAKE_BALANCEC_BOWL_LANG as lang } from "../language/en";
 import MbbStepOne from "../components/mbb-steps/mbb-stepone";
 import MbbStepTwo from "../components/mbb-steps/mbb-steptwo";
 import MbbStepThree from "../components/mbb-steps/mbb-stepthree";
+import MbbStepFinal from "../components/mbb-steps/mbb-final";
 import bgImage from "../images/make-balanced-bowl/mbb-bg-1-op.png";
+import bgImageLarge from "../images/make-balanced-bowl/final/bg-op.png";
 
 const STEPS = [
   {
@@ -77,6 +79,19 @@ export default class MakeBalancedBowlPage extends Component {
   backStep = () => {
     const { activeStep } = this.state;
     activeStep.id = activeStep.id - 1;
+    this.setState({
+      activeStep: activeStep,
+    });
+  };
+  makeNewBowl = () => {
+    const activeStep = {
+      id: 0,
+      selectedItem: {
+        1: [],
+        2: [],
+        3: [],
+      },
+    };
     this.setState({
       activeStep: activeStep,
     });
@@ -154,7 +169,19 @@ export default class MakeBalancedBowlPage extends Component {
           </div>
         );
       case 4:
-        return <div>DOne</div>;
+        return (
+          <div>
+            <MbbStepFinal />
+            <div className="final-action">
+              <button className="btn btn-primary" onClick={this.makeNewBowl}>
+                {lang.MAKE_NEW_BALANCED_BOWl}
+              </button>
+              <div>
+                <span>{lang.SHARE_RECIPE}</span>
+              </div>
+            </div>
+          </div>
+        );
     }
   }
   render() {
@@ -165,7 +192,9 @@ export default class MakeBalancedBowlPage extends Component {
           <div
             className="mbb-main-content"
             style={{
-              backgroundImage: `url(${bgImage})`,
+              backgroundImage: `url(${
+                this.state.activeStep.id === 4 ? bgImageLarge : bgImage
+              })`,
             }}
           >
             <div className="step-content-wrapper">
@@ -173,7 +202,7 @@ export default class MakeBalancedBowlPage extends Component {
                 <h1 className="title">{lang.MAKE_YOUR_BALANCED_BOWL}</h1>
                 <ul>
                   {STEPS.map((item) => (
-                    <li>{item.text}</li>
+                    <li key={item.id}>{item.text}</li>
                   ))}
                 </ul>
               </div>

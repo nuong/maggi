@@ -4,7 +4,6 @@ import React from "react"
 import imgOp1 from "../../images/make-balanced-bowl/step1/1.png";
 import imgOp2 from "../../images/make-balanced-bowl/step1/2.png";
 import imgOp3 from "../../images/make-balanced-bowl/step1/3.png";
-import bgStep from "../../images/make-balanced-bowl/step1/bg.png"
 
 const MbbStepOne = ({ selection, selectHandle, lang }) => {
 	const wrapStyle = {
