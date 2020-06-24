@@ -247,7 +247,7 @@ export default class CarouselSection extends React.PureComponent {
                   <span className="indicator">•</span>
                   <span className="indicator">•</span>
                 </div>
-                <button className="button btn-primary">
+                <button className="button btn-primary custom-button">
                   Make a Balanced Bowl
                 </button>
                 <p>View our Recipes</p>
