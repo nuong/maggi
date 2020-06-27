@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("Avenir.ttc") format("ttc");
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("Avenir Next.ttc") format("ttc");
+}
+@font-face {
+  font-family: "Hand Of Sean";
+  src: url(Hand_Of_Sean_Demo.ttf);
+}
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("MyriadPro-Regular.otf") format("otf");
+}
