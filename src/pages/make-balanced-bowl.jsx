@@ -18,14 +18,20 @@ const STEPS = [
     id: 1,
     text: lang.STEP_1,
     options: [{}],
+    min: 1,
+    max: 1,
   },
   {
     id: 2,
     text: lang.STEP_2,
+    min: 1,
+    max: 2,
   },
   {
     id: 3,
     text: lang.STEP_3,
+    min: 1,
+    max: 2,
   },
   {
     id: 4,
@@ -45,7 +51,12 @@ export default class MakeBalancedBowlPage extends Component {
     },
   };
   onSelectStep1 = (index) => {
-    this.updateActiveStep(1, index);
+    // this.updateActiveStep(1, index);
+    const { activeStep } = this.state;
+    activeStep.selectedItem[1] = [index];
+    this.setState({
+      activeStep: activeStep,
+    });
   };
   onSelectStep2 = (index) => {
     this.updateActiveStep(2, index);
@@ -58,6 +69,9 @@ export default class MakeBalancedBowlPage extends Component {
     let selection = activeStep.selectedItem[step];
     const index = selection.indexOf(stepIndex);
     if (index == -1) {
+      if (selection.length >= 2) {
+        return alert(lang.MAX_WARNING);
+      }
       selection.push(stepIndex);
     } else {
       selection.splice(index, 1);
@@ -71,6 +85,14 @@ export default class MakeBalancedBowlPage extends Component {
 
   nextStep = () => {
     const { activeStep } = this.state;
+    const min = (STEPS.find((it) => it.id === activeStep.id) || {}).min;
+    if (
+      min &&
+      activeStep.selectedItem[activeStep.id] &&
+      activeStep.selectedItem[activeStep.id].length < min
+    ) {
+      return alert(lang.MIN_WARNING);
+    }
     activeStep.id = activeStep.id + 1;
     this.setState({
       activeStep: activeStep,
@@ -171,7 +193,10 @@ export default class MakeBalancedBowlPage extends Component {
       case 4:
         return (
           <div>
-            <MbbStepFinal />
+            <MbbStepFinal
+              lang={lang}
+              selection={this.state.activeStep.selectedItem}
+            />
             <div className="final-action">
               <button className="btn btn-primary" onClick={this.makeNewBowl}>
                 {lang.MAKE_NEW_BALANCED_BOWl}
@@ -202,7 +227,14 @@ export default class MakeBalancedBowlPage extends Component {
                 <h1 className="title">{lang.MAKE_YOUR_BALANCED_BOWL}</h1>
                 <ul>
                   {STEPS.map((item) => (
-                    <li key={item.id}>{item.text}</li>
+                    <li
+                      key={item.id}
+                      className={
+                        this.state.activeStep.id === item.id ? "active" : ""
+                      }
+                    >
+                      {item.text}
+                    </li>
                   ))}
                 </ul>
               </div>

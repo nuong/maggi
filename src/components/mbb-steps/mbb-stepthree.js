@@ -37,6 +37,11 @@ const MbbStepThree = ({ selection, selectHandle, lang }) => {
 						<span dangerouslySetInnerHTML={{ __html: lang[`STEP3_OP${index}_TITLE`] }}>
 
 						</span>
+						<span className="st-tooltip">
+							<span dangerouslySetInnerHTML={{ __html: lang[`STEP3_OP${index}_TOOLTIP`] }}>
+							</span>
+							<span className="__arrow"></span>
+						</span>
 					</div>
 				))
 			}
