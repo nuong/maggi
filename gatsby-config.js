@@ -4,6 +4,7 @@ module.exports = {
 		description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
 		author: `@gatsbyjs`,
 	},
+	pathPrefix: '/maggi',
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
@@ -14,7 +15,7 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+		`gatsby-plugin-sharp`,
 		{
 			resolve: 'gatsby-plugin-sass',
 			options: {
