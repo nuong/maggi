@@ -2,4 +2,48 @@
   padding: 8em 11em;
   padding-bottom: 0;
   text-align: center;
+  &-header {
+    padding: 2em;
+    text-align: left;
+    color: #fff;
+    span {
+      font-size: 18px;
+    }
+  }
+  .custom-button {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 2em;
+    margin: 1em;
+    border-radius: 20px;
+  }
+  &_kari-box {
+    height: 62em;
+    background: url("../../images/delicious-recipes/red\ base\ box.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+  &_ayam-box {
+    height: 62em;
+    background: url("../../images/delicious-recipes/base.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &_tomyum-box {
+    height: 62em;
+    background: url("../../images/delicious-recipes/purple\ box\ base.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .delecious-bowl{
+    position: absolute;
+    height: 12em;
+    top: 0em;
+    right: 0;
+  }
+
+
 }
