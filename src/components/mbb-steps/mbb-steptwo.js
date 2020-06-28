@@ -26,7 +26,7 @@ const MbbStepTwo = ({ selection, selectHandle, lang }) => {
 				[1, 2, 3, 4, 5, 6].map(index => (
 					<div key={index} className={`__item ${selection.indexOf(index) > -1 ? 'active' : ''}`} onClick={() => selectHandle(index)} >
 						<img src={options[index]} alt=""></img>
-						<span dangerouslySetInnerHTML={{ __html: lang[`STEP2_OP${index}_TITLE`] }}>
+						<span className="step-text-des" dangerouslySetInnerHTML={{ __html: lang[`STEP2_OP${index}_TITLE`] }}>
 
 						</span>
 						<span className="st-tooltip">

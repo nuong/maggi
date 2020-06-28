@@ -6,6 +6,7 @@ import MbbStepOne from "../components/mbb-steps/mbb-stepone";
 import MbbStepTwo from "../components/mbb-steps/mbb-steptwo";
 import MbbStepThree from "../components/mbb-steps/mbb-stepthree";
 import MbbStepFinal from "../components/mbb-steps/mbb-final";
+import WarningModal from "../components/mbb-steps/warning-modal";
 import bgImage from "../images/make-balanced-bowl/mbb-bg-1-op.png";
 import bgImageLarge from "../images/make-balanced-bowl/final/bg-op.png";
 
@@ -49,6 +50,8 @@ export default class MakeBalancedBowlPage extends Component {
         3: [],
       },
     },
+    waringModalVisible: false,
+    warningModalMes: "",
   };
   onSelectStep1 = (index) => {
     // this.updateActiveStep(1, index);
@@ -70,7 +73,8 @@ export default class MakeBalancedBowlPage extends Component {
     const index = selection.indexOf(stepIndex);
     if (index == -1) {
       if (selection.length >= 2) {
-        return alert(lang.MAX_WARNING);
+        this.openWarningModal(lang.MAX_WARNING);
+        return;
       }
       selection.push(stepIndex);
     } else {
@@ -91,7 +95,8 @@ export default class MakeBalancedBowlPage extends Component {
       activeStep.selectedItem[activeStep.id] &&
       activeStep.selectedItem[activeStep.id].length < min
     ) {
-      return alert(lang.MIN_WARNING);
+      this.openWarningModal(lang.MIN_WARNING);
+      return;
     }
     activeStep.id = activeStep.id + 1;
     this.setState({
@@ -118,15 +123,26 @@ export default class MakeBalancedBowlPage extends Component {
       activeStep: activeStep,
     });
   };
+  openWarningModal = (mess) => {
+    this.setState({
+      waringModalVisible: true,
+      warningModalMes: mess,
+    });
+  };
+  closeWarningModal = () => {
+    this.setState({
+      waringModalVisible: false,
+    });
+  };
 
   renderStep(step) {
     switch (step) {
       case 0:
         return (
           <div className="step-0">
-            {lang.INTRO_TITLE}
-            <h2 className="sub-title">{lang.INTRO_BIG_TITLE}</h2>
-            <p>{lang.INTRO_DES}</p>
+            <div className="step-dt-header">{lang.INTRO_TITLE}</div>
+            <h2 className="mbb-sub-title">{lang.INTRO_BIG_TITLE}</h2>
+            <p className="step-des">{lang.INTRO_DES}</p>
             <button className="btn btn-primary" onClick={this.nextStep}>
               {lang.START_NOW}
             </button>
@@ -136,7 +152,7 @@ export default class MakeBalancedBowlPage extends Component {
       case 1:
         return (
           <div>
-            <p>{lang.STEP1_TITLE}</p>
+            <div className="step-dt-header">{lang.STEP1_TITLE}</div>
             <MbbStepOne
               lang={lang}
               selection={this.state.activeStep.selectedItem["1"]}
@@ -155,7 +171,7 @@ export default class MakeBalancedBowlPage extends Component {
       case 2:
         return (
           <div>
-            <p>{lang.STEP2_TITLE}</p>
+            <div className="step-dt-header">{lang.STEP2_TITLE}</div>
             <MbbStepTwo
               lang={lang}
               selection={this.state.activeStep.selectedItem["2"]}
@@ -174,7 +190,7 @@ export default class MakeBalancedBowlPage extends Component {
       case 3:
         return (
           <div>
-            <p>{lang.STEP3_TITLE}</p>
+            <div className="step-dt-header">{lang.STEP3_TITLE}</div>
             <MbbStepThree
               lang={lang}
               selection={this.state.activeStep.selectedItem["3"]}
@@ -242,6 +258,12 @@ export default class MakeBalancedBowlPage extends Component {
                 {this.renderStep(this.state.activeStep.id)}
               </div>
             </div>
+            {this.state.waringModalVisible ? (
+              <WarningModal
+                message={this.state.warningModalMes}
+                closeModal={this.closeWarningModal}
+              />
+            ) : null}
           </div>
         </Layout>
       </>

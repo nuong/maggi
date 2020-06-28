@@ -36,14 +36,14 @@ const MbbFinal = ({ lang, selection }) => {
 								<div>
 									<img src={require(`../../images/make-balanced-bowl/final/palmful.png`)} />
 								</div>
-								<span>{lang.PALMFUL}</span>
+								<span className="__des">{lang.PALMFUL}</span>
 							</div>
 							<div className="cri-result">
 								{
 									selection[1].map((item, index) => (
 										<div key={index}>
 											<img src={require(`../../images/make-balanced-bowl/step1/${item}.png`)} />
-											<span dangerouslySetInnerHTML={{ __html: lang[`STEP1_OP${item}_TITLE`] }}></span>
+											<span className="step-text-des" dangerouslySetInnerHTML={{ __html: lang[`STEP1_OP${item}_TITLE`] }}></span>
 										</div>
 									))
 								}
@@ -60,14 +60,14 @@ const MbbFinal = ({ lang, selection }) => {
 								<div>
 									<img src={require(`../../images/make-balanced-bowl/final/fistful.png`)} />
 								</div>
-								<span>{lang.FISTFUL}</span>
+								<span className="__des">{lang.FISTFUL}</span>
 							</div>
 							<div className="cri-result">
 								{
 									selection[2].map((item, index) => (
 										<div key={index}>
 											<img src={require(`../../images/make-balanced-bowl/step2/${item}.png`)} />
-											<span dangerouslySetInnerHTML={{ __html: lang[`STEP2_OP${item}_TITLE`] }}>{}</span>
+											<span className="step-text-des" dangerouslySetInnerHTML={{ __html: lang[`STEP2_OP${item}_TITLE`] }}>{}</span>
 										</div>
 									))
 								}
@@ -84,14 +84,14 @@ const MbbFinal = ({ lang, selection }) => {
 								<div>
 									<img src={require(`../../images/make-balanced-bowl/final/handful.png`)} />
 								</div>
-								<span>{lang.HANDFUL}</span>
+								<span className="__des">{lang.HANDFUL}</span>
 							</div>
 							<div className="cri-result">
 								{
 									selection[3].map((item, index) => (
 										<div key={index}>
 											<img src={require(`../../images/make-balanced-bowl/step3/${item}.png`)} />
-											<span dangerouslySetInnerHTML={{ __html: lang[`STEP3_OP${item}_TITLE`] }}>{}</span>
+											<span className="step-text-des" dangerouslySetInnerHTML={{ __html: lang[`STEP3_OP${item}_TITLE`] }}>{}</span>
 										</div>
 									))
 								}
