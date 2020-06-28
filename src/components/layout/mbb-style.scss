@@ -61,7 +61,7 @@
         }
         .step-dt-header {
           font-family: Avenir;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 1.5rem;
           margin-bottom: 1rem;
         }
@@ -69,7 +69,7 @@
           font-family: Avenir;
           font-size: 1.5rem;
           margin-bottom: 1.5rem;
-          font-weight: 600;
+          font-weight: 500;
         }
         .stepx-wp {
           display: flex;
@@ -94,13 +94,18 @@
               .st-tooltip {
                 display: block;
               }
+              .step-text-des {
+                // font-family: AvenirNext;
+                font-weight: 600;
+              }
             }
             &.active {
               //   .st-tooltip {
               //     display: block;
               //   }
               .step-text-des {
-                font-family: AvenirNext;
+                // font-family: AvenirNext;
+                font-weight: 600;
               }
             }
             .st-tooltip {
@@ -232,7 +237,7 @@
                   }
                   .__des {
                     color: #72553c;
-                    font-family: AvenirNext;
+                    font-weight: 600;
                     font-size: 1.125rem;
                   }
                 }
@@ -243,7 +248,7 @@
                 padding-right: 50px;
                 align-items: center;
                 margin: 15px 0 10px 0;
-                font-family: AvenirNext;
+                font-weight: 600;
                 color: #5e3266;
                 font-size: 1.25rem;
                 &::before {
@@ -321,6 +326,6 @@
   }
 }
 .step-text-des {
-  font-weight: 600;
+  font-weight: 500;
   color: #433224;
 }

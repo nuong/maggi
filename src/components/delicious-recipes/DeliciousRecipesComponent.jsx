@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import "./styles.scss";
 import base1 from "../../images/delicious-recipes/Kari-Bowl.png";
 import base2 from "../../images/delicious-recipes/Ayam-Bowl.png";
@@ -23,10 +24,10 @@ import prawn from "../../images/make-balanced-bowl/step2/4.png";
 import squid from "../../images/make-balanced-bowl/step2/5.png";
 
 import mustard from "../../images/make-balanced-bowl/step3/1.png";
-import carrot from "../../images/make-balanced-bowl/step3/2.png"
-import bokchoi from "../../images/make-balanced-bowl/step3/4.png"
-import cauliflower from "../../images/make-balanced-bowl/step3/3.png"
-import mushroom from "../../images/make-balanced-bowl/step3/10.png"
+import carrot from "../../images/make-balanced-bowl/step3/2.png";
+import bokchoi from "../../images/make-balanced-bowl/step3/4.png";
+import cauliflower from "../../images/make-balanced-bowl/step3/3.png";
+import mushroom from "../../images/make-balanced-bowl/step3/10.png";
 
 import Calories from "./component/calories/CaloriesComponent";
 
@@ -37,8 +38,8 @@ const curry_carbohydrates = {
   left_title: "a palm size",
   right_title: "MAGGI® 2-Minute Curry Noodles",
   header_title: "carbohydrates",
-  color: "#AF3837"
-}
+  color: "#AF3837",
+};
 
 const curry_protein = {
   header: `url(${line})`,
@@ -49,8 +50,8 @@ const curry_protein = {
   right_title_1: "Chicken Breast (boiled and pulled thinly)",
   right_title_2: "Hard-boil Egg",
   header_title: "Protein",
-  color: "#AF3837"
-}
+  color: "#AF3837",
+};
 
 const curry_vegetables = {
   header: `url(${line})`,
@@ -61,8 +62,8 @@ const curry_vegetables = {
   right_title_1: "Mustard Leaf/Sawi",
   right_title_2: "Carrot (sliced thinly)",
   header_title: "Vegetables",
-  color: "#AF3837"
-}
+  color: "#AF3837",
+};
 
 const chicken_carbohydrates = {
   header: `url(${line2})`,
@@ -71,8 +72,8 @@ const chicken_carbohydrates = {
   left_title: "a palm size",
   right_title: "MAGGI® 2-Minute Chicken Noodles",
   header_title: "carbohydrates",
-  color: "#7DA03E"
-}
+  color: "#7DA03E",
+};
 
 const chicken_protein = {
   header: `url(${line2})`,
@@ -83,8 +84,8 @@ const chicken_protein = {
   right_title_1: "Chicken Breast (sliced thinly)",
   right_title_2: "Hard-boil Egg",
   header_title: "Protein",
-  color: "#7DA03E"
-}
+  color: "#7DA03E",
+};
 
 const chicken_vegetables = {
   header: `url(${line2})`,
@@ -95,8 +96,8 @@ const chicken_vegetables = {
   right_title_1: "Bok Choy",
   right_title_2: "Carrot (sliced)",
   header_title: "Vegetables",
-  color: "#7DA03E"
-}
+  color: "#7DA03E",
+};
 
 const tomyum_carbohydrates = {
   header: `url(${line3})`,
@@ -105,8 +106,8 @@ const tomyum_carbohydrates = {
   left_title: "a palm size",
   right_title: "MAGGI® 2-Minute Tom Yam Noodles",
   header_title: "carbohydrates",
-  color: "#5E3266"
-}
+  color: "#5E3266",
+};
 
 const tomyum_protein = {
   header: `url(${line3})`,
@@ -117,8 +118,8 @@ const tomyum_protein = {
   right_title_1: "Prawn",
   right_title_2: "Squid",
   header_title: "Protein",
-  color: "#5E3266"
-}
+  color: "#5E3266",
+};
 
 const tomyum_vegetables = {
   header: `url(${line3})`,
@@ -141,31 +142,31 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
         <div className="delicious-recipes" id="delicious-recipes">
           <h1>Delicious Recipes</h1>
           <div className="columns custom-row">
-            <div className="column is-4" style={{position: 'relative'}}>
+            <div className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_kari-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>
                   <h1>Curry</h1>
                 </div>
-                <Calories data={curry_carbohydrates}/>
-                <Calories data={curry_protein} multiple/>
+                <Calories data={curry_carbohydrates} />
+                <Calories data={curry_protein} multiple />
                 <Calories data={curry_vegetables} multiple />
               </div>
               <img className="delecious-bowl" src={base1} alt="" />
             </div>
-            <div className="column is-4" style={{ position: 'relative' }}>
+            <div className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_ayam-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>
                   <h1>Chicken</h1>
                 </div>
                 <Calories data={chicken_carbohydrates} />
-                <Calories data={chicken_protein} multiple/>
-                <Calories data={chicken_vegetables} multiple/>
+                <Calories data={chicken_protein} multiple />
+                <Calories data={chicken_vegetables} multiple />
               </div>
               <img className="delecious-bowl" src={base2} alt="" />
             </div>
-            <div className="column is-4" style={{ position: 'relative' }}>
+            <div className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_tomyum-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>
@@ -178,9 +179,14 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
               <img className="delecious-bowl" src={base3} alt="" />
             </div>
           </div>
-          <button className="button btn-primary custom-button button-responsive">
-            Customise your own Balanced Bowl
-          </button>
+          <Link to="/make-balanced-bowl">
+            <button
+              className="btn btn-primary"
+              style={{ marginBottom: "20px" }}
+            >
+              Customise your own Balanced Bowl
+            </button>
+          </Link>
         </div>
       </>
     );
