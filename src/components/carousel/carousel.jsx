@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 // import { Carousel } from "react-responsive-carousel";
 
@@ -234,19 +235,52 @@ export default class CarouselSection extends React.PureComponent {
                   </div>
                 </Carousel>
                 <div className="indicator-wrapper">
-                  <span className={`indicator ${currentSlide === 0 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(0)}>•</span>
-                  <span className={`indicator ${currentSlide === 1 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(1)}>•</span>
-                  <span className={`indicator ${currentSlide === 2 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(2)}>•</span>
-                  <span className={`indicator ${currentSlide === 3 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(3)}>•</span>
+                  <span
+                    className={`indicator ${
+                      currentSlide === 0 ? "active" : ""
+                    }`}
+                    onClick={() => this.updateCurrentSlide(0)}
+                  >
+                    •
+                  </span>
+                  <span
+                    className={`indicator ${
+                      currentSlide === 1 ? "active" : ""
+                    }`}
+                    onClick={() => this.updateCurrentSlide(1)}
+                  >
+                    •
+                  </span>
+                  <span
+                    className={`indicator ${
+                      currentSlide === 2 ? "active" : ""
+                    }`}
+                    onClick={() => this.updateCurrentSlide(2)}
+                  >
+                    •
+                  </span>
+                  <span
+                    className={`indicator ${
+                      currentSlide === 3 ? "active" : ""
+                    }`}
+                    onClick={() => this.updateCurrentSlide(3)}
+                  >
+                    •
+                  </span>
                 </div>
                 <p className="description">
                   Serving sizes are just suggested approximate proportions of
                   food you can include on your plate.{" "}
                   <span>Find out more.</span>
                 </p>
-                <button className="button btn-primary custom-button">
-                  Make a Balanced Bowl
-                </button>
+                <Link to="/make-balanced-bowl">
+                  <button
+                    className="btn btn-primary"
+                    style={{ fontSize: "1.25rem" }}
+                  >
+                    Make a Balanced Bowl
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

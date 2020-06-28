@@ -11,15 +11,15 @@
   .landing-page {
     &-container {
       width: 1280px;
-      .main-header {
-        &_logo {
-          height: 8em !important;
-        }
-        &_menu {
-          &-item {
-            font-size: 20px;
-          }
-        }
+    }
+  }
+  .main-header {
+    &_logo {
+      height: 8em !important;
+    }
+    &_menu {
+      &-item {
+        font-size: 20px;
       }
     }
   }
@@ -47,10 +47,10 @@
     &-step {
       padding-top: 2rem !important;
       .left-arrow {
-        top: 40% !important
+        top: 40% !important;
       }
       .right-arrow {
-        top: 40% !important
+        top: 40% !important;
       }
     }
     .custom-button {
@@ -85,7 +85,7 @@
     font-size: 1em !important;
   }
   .description {
-    font-size: .7em;
+    font-size: 0.7em;
   }
   .why-maggi {
     padding: 11em !important;
@@ -101,9 +101,9 @@
         &-header {
           font-size: 1.2em !important;
         }
-        &-content{
+        &-content {
           img {
-            margin-bottom: .8em !important;
+            margin-bottom: 0.8em !important;
             height: 5em;
           }
           p {
@@ -128,7 +128,7 @@
     }
   }
 
-  .delicious-recipes{
+  .delicious-recipes {
     padding: 5em 6em !important;
     padding-bottom: 0 !important;
     .custom-row {
@@ -149,7 +149,7 @@
     &_tomyum-box {
       height: 42em !important;
     }
-    .delecious-bowl{
+    .delecious-bowl {
       height: 8em !important;
     }
     &-calories {
@@ -172,12 +172,12 @@
           }
           .food {
             &-item {
-            height: 3em !important;
+              height: 3em !important;
             }
           }
           p {
-            margin-top: .5em !important;
-            font-size: .9rem !important;
+            margin-top: 0.5em !important;
+            font-size: 0.9rem !important;
             padding: 0 3em !important;
           }
           &.multiple {

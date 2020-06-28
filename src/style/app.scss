@@ -1,18 +1,18 @@
 @font-face {
   font-family: HandOFSean;
-  src: url("/fonts/Hand_Of_Sean_Demo.ttf");
+  src: url("/maggi/fonts/Hand_Of_Sean_Demo.ttf");
 }
 @font-face {
   font-family: Avenir;
-  src: url("/fonts/Avenir.ttc");
+  src: url("/maggi/fonts/Avenir.ttc");
 }
 @font-face {
   font-family: AvenirNext;
-  src: url("/fonts/Avenir Next.ttc");
+  src: url("/maggi/fonts/Avenir Next.ttc");
 }
 @font-face {
   font-family: MyriadPro;
-  src: url("/fonts/MyriadPro-Regular.otf");
+  src: url("/maggi/fonts/MyriadPro-Regular.otf");
 }
 
 $primary-color: #191919;
@@ -38,15 +38,17 @@ button {
 }
 
 .btn {
-  height: 40px;
+  height: 60px;
   display: inline-flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 35px;
   font-weight: 600;
   transition: all 0.3s ease-in;
-  border-radius: 4px;
+  border-radius: 9px;
   border: none;
   cursor: pointer;
+  font-family: Avenir;
+  font-size: 1.5rem;
 }
 .btn-default {
 }
