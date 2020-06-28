@@ -2,10 +2,17 @@
   padding: 8em 11em;
   padding-bottom: 0;
   text-align: center;
+  .custom-row {
+    margin: 6em 0;
+  }
   &-header {
     padding: 2em;
     text-align: left;
     color: #fff;
+    font-family: "HandOfSean";
+    h1 {
+      color: #fff;
+    }
     span {
       font-size: 18px;
     }
@@ -43,6 +50,11 @@
     height: 12em;
     top: 0em;
     right: 0;
+  }
+
+  .button-responsive {
+    margin-top: 3em;
+    margin-bottom: 2em;
   }
 
 

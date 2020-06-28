@@ -11,7 +11,7 @@ const { Carousel } =
 const Full_Bowl = () => {
   return (
     <>
-      <h1>Serve your family Balanced Bowls!</h1>
+      <h1 className="carousel-header">Serve your family Balanced Bowls!</h1>
       <p style={{ marginBottom: "1em" }}>
         This visual guide aims to help you create wholesome Balanced Bowls using
         MAGGI® noodles and a variety of fresh ingredients for your family from
@@ -38,16 +38,12 @@ const Step_1 = () => {
       </div>
       <div className="columns is-gapless">
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">1 fistful</span>
+          <span className="sub-title-custom">1 fistful</span>
         </div>
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">1 packet</span>
+          <span className="sub-title-custom">1 packet</span>
         </div>
       </div>
-      <p className="description">
-        Serving sizes are just suggested approximate proportions of food you can
-        include on your plate. <span>Find out more.</span>
-      </p>
     </>
   );
 };
@@ -68,16 +64,12 @@ const Step_2 = () => {
       </div>
       <div className="columns is-gapless">
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">1 palm size</span>
+          <span className="sub-title-custom">1 palm size</span>
         </div>
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">protein</span>
+          <span className="sub-title-custom">protein</span>
         </div>
       </div>
-      <p className="description">
-        Serving sizes are just suggested approximate proportions of food you can
-        include on your plate. <span>Find out more.</span>
-      </p>
     </>
   );
 };
@@ -101,16 +93,12 @@ const Step_3 = () => {
       </div>
       <div className="columns is-gapless">
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">1 handful</span>
+          <span className="sub-title-custom">1 handful</span>
         </div>
         <div className="column is-6-widescreen is-6-fullhd">
-          <span className="sub-title">vegetables</span>
+          <span className="sub-title-custom">vegetables</span>
         </div>
       </div>
-      <p className="description">
-        Serving sizes are just suggested approximate proportions of food you can
-        include on your plate. <span>Find out more.</span>
-      </p>
     </>
   );
 };
@@ -171,7 +159,11 @@ export default class CarouselSection extends React.PureComponent {
     return (
       <div className="main-carousel">
         <div className="columns">
-          <div className="column is-8-widescreen is-8-fullhd content">
+          <div className="column is-8-desktop is-8-widescreen is-8-fullhd content">
+            <div className="glass-of-water">
+              <span>and a glass of water</span>
+              <div className="stroke"></div>
+            </div>
             <div className="main-carousel-balance-bowl columns is-gapless">
               <div className="column is-6">
                 <div style={{ height: "50%" }}>
@@ -200,7 +192,7 @@ export default class CarouselSection extends React.PureComponent {
             </div>
           </div>
           <div
-            className="column is-4-widescreen is-4-fullhd"
+            className="column is-4-desktop is-4-widescreen is-4-fullhd"
             style={{ position: "relative" }}
           >
             <div className="main-carousel-step">
@@ -242,15 +234,19 @@ export default class CarouselSection extends React.PureComponent {
                   </div>
                 </Carousel>
                 <div className="indicator-wrapper">
-                  <span className="indicator">•</span>
-                  <span className="indicator">•</span>
-                  <span className="indicator">•</span>
-                  <span className="indicator">•</span>
+                  <span className={`indicator ${currentSlide === 0 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(0)}>•</span>
+                  <span className={`indicator ${currentSlide === 1 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(1)}>•</span>
+                  <span className={`indicator ${currentSlide === 2 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(2)}>•</span>
+                  <span className={`indicator ${currentSlide === 3 ? 'active' : ''}`} onClick={() => this.updateCurrentSlide(3)}>•</span>
                 </div>
+                <p className="description">
+                  Serving sizes are just suggested approximate proportions of
+                  food you can include on your plate.{" "}
+                  <span>Find out more.</span>
+                </p>
                 <button className="button btn-primary custom-button">
                   Make a Balanced Bowl
                 </button>
-                <p>View our Recipes</p>
               </div>
             </div>
           </div>

@@ -10,17 +10,26 @@
 .custom-box {
   padding-left: 10em;
   padding-right: 0;
+
   &-item {
     position: relative;
     img {
       position: absolute;
       z-index: 1;
     }
+    &.right-box {
+      padding-right: 8em;
+      height: 100%
+    }
     .box-container {
       z-index: 2;
       position: relative;
       padding: 2em;
       text-align: center;
+      &-header {
+        font-size: 2em;
+        font-family: "HandOfSean";
+      }
       &-content{
         img {
           position: relative;

@@ -1,6 +1,22 @@
 .main-carousel {
+
+  .glass-of-water {
+    position: absolute;
+    top: 40%;
+    left: 5em;
+    width: 5em;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "HandOfSean";
+    .stroke {
+      background: url("../../images/layout/stroke.png");
+      height: 3em;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
   .carousel {
-    height: 27rem;
+    height: 25rem;
   }
   .columns {
     margin: 0;
@@ -8,6 +24,7 @@
   .content {
     display: flex;
     justify-content: flex-end;
+    position: relative;
   }
   &-balance-bowl {
     width: 93%;
@@ -102,12 +119,16 @@
   .indicator-wrapper {
     display: flex;
     justify-content: center;
+    margin: 1em 0;;
     .indicator {
       padding: 0 2px;
       font-size: 2em;
       color: #646464;
       cursor: pointer;
       &:hover {
+        color: $active-color;
+      }
+      &.active {
         color: $active-color;
       }
     }
@@ -125,7 +146,7 @@
   &-step {
     text-align: center;
     height: 100%;
-    padding-top: 10rem;
+    padding-top: 7rem;
     padding-right: 7rem;
     padding-left: 0;
     position: relative;

@@ -11,10 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
+  font-family: "HandOfSean";
   font-size: 3rem;
   line-height: 4rem;
   margin-bottom: 0.5em;
   font-weight: 500;
+  color: $primary-color;
 }
 p {
   font-size: 1.6rem;
@@ -26,7 +28,6 @@ p {
     background: url("../../images/layout/Maggi\ Website_Homepage_1.psd.png");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 3609px;
     width: 1920px;
     margin: auto;
   }
@@ -50,14 +51,37 @@ p {
     align-items: center;
     justify-content: flex-end;
     &-item {
-      line-height: 32px;
+      display: flex;
+      line-height: 1.7em;
       font-size: $primary-font-size;
       padding: 0 20px;
+      font-family: "AvenirNext";
       cursor: pointer;
+      a {
+        color: $primary-color;
+      }
+      &.language {
+        padding: 0;
+      }
+      .language {
+        &-common {
+          &.en {
+            padding-right: .7em;
+            border-right: 1px solid;
+          }
+          &.bm {
+            padding-left: .7em;
+          }
+          &.active {
+            span {
+              padding: 0.2em .3em;
+              border-radius: 10px;
+              background-color: rgba(255, 165, 0, 0.82);
+              color: #fff;
+            }
+          }
+        }
+      }
     }
   }
-}
-
-@media only screen and (min-width: 1600px) and (max-width: 1920px) {
-
 }

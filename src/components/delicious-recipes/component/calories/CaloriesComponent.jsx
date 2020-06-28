@@ -10,12 +10,12 @@ export default class CaloriesComponent extends React.PureComponent {
       <>
         <div className="delicious-recipes-calories">
           <div className="delicious-recipes-calories_header" style={{ background: data.header}}>
-            <span style={{color: data.color}}>{data.header_title}</span>
+            <span style={{ color: data.color, fontFamily:"AvenirNext"}}>{data.header_title}</span>
           </div>
           <div className="delicious-recipes-calories_body">
             <div className="delicious-recipes-calories_body-left">
               <div className="caloiries" style={{ background: data.left_image }}></div>
-              <span style={{ color: data.color }}>{data.left_title}</span>
+              <span style={{ color: "#72553C", fontFamily: "AvenirNext" }}>{data.left_title}</span>
             </div>
             <div className={`delicious-recipes-calories_body-right ${multiple ? 'multiple' : ''}`} >
               {
@@ -25,7 +25,7 @@ export default class CaloriesComponent extends React.PureComponent {
                   <p>{data.right_title}</p>
                 </> :
                 <>
-                  <div className="columns is-gapless" style={{ padding: '0 10px'}}>
+                  <div className="columns is-gapless " style={{ padding: '0 10px'}}>
                     <div className="column is-6">
                       <div className="food-item" style={{ background: data.right_image_1 }}></div>
                       <p style={{ padding: '0' }}>{data.right_title_1}</p>

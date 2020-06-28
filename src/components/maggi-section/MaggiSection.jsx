@@ -24,14 +24,14 @@ export default class MaggiSectionComponent extends React.PureComponent {
         </div>
         <div className="columns" style={{ margin: 0 }}>
           <div
-            className="column is-8-widescreen is-8-fullhd"
+            className="column is-8-desktop is-8-widescreen is-8-fullhd"
             style={{ width: "64%" }}
           >
             <div className="custom-box">
               <div className="custom-box-item">
                 <img src={baseBox} alt="" />
                 <div className="box-container">
-                  <p style={{ fontSize: "2em" }}>Selected Ingredients</p>
+                  <p className="box-container-header">Selected Ingredients</p>
                   <div className="columns">
                     <div className="column is-6 box-container-content">
                       <img src={icon1} alt="" />
@@ -54,16 +54,17 @@ export default class MaggiSectionComponent extends React.PureComponent {
             </div>
           </div>
           <div
-            className="column is-4-widescreen is-4-fullhd"
+            className="column is-4-desktop is-4-widescreen is-4-fullhd"
             style={{ paddingBottom: "1.5em" }}
           >
             <div
-              className="custom-box-item"
-              style={{ paddingRight: "8em", height: "100%" }}
+              className="custom-box-item right-box"
             >
               <img src={baseBox2} alt="" style={{ height: "100%" }} />
-              <div className="box-container">
-                <p style={{ fontSize: "2em" }}>Convenience</p>
+              <div className="box-container convenience">
+                <p className="convenience-title" className="box-container-header">
+                  Convenience
+                </p>
                 <div className="box-container-content">
                   <img src={convenience} alt="" style={{ marginTop: "2em" }} />
                   <p>MAGGI® Noodles can be prepared within 2-minutes</p>

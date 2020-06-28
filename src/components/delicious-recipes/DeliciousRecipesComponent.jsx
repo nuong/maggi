@@ -121,7 +121,7 @@ const tomyum_protein = {
 }
 
 const tomyum_vegetables = {
-  header: `url(${line})`,
+  header: `url(${line3})`,
   left_image: `url(${handful})`,
   right_image_1: `url(${cauliflower})`,
   right_image_2: `url(${mushroom})`,
@@ -129,8 +129,8 @@ const tomyum_vegetables = {
   right_title_1: "Cauliflower",
   right_title_2: "Straw Mushrooms",
   header_title: "Vegetables",
-  color: "#5E3266"
-}
+  color: "#5E3266",
+};
 
 export default class DeliciousRecipiesComponent extends React.PureComponent {
   state = {};
@@ -140,7 +140,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
       <>
         <div className="delicious-recipes" id="delicious-recipes">
           <h1>Delicious Recipes</h1>
-          <div className="columns" style={{ margin: 0, marginTop: "6em" }}>
+          <div className="columns custom-row">
             <div className="column is-4" style={{position: 'relative'}}>
               <div className="delicious-recipes_kari-box">
                 <div className="delicious-recipes-header">
@@ -178,7 +178,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
               <img className="delecious-bowl" src={base3} alt="" />
             </div>
           </div>
-          <button className="button btn-primary custom-button" style={{ marginTop: "6em" }}>
+          <button className="button btn-primary custom-button button-responsive">
             Customise your own Balanced Bowl
           </button>
         </div>

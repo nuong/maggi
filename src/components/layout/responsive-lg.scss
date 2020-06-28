@@ -1,0 +1,151 @@
+@media only screen and (min-width: 1600px) and (max-width: 1900px) {
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5em;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 0.2em;
+  }
+  .landing-page {
+    &-container {
+      width: 1600px;
+    }
+  }
+  .main-carousel-balance-bowl {
+    height: 40em !important;
+    &-full {
+      height: 35em !important;
+    }
+  }
+  .main-carousel {
+    .glass-of-water {
+      top: 35% !important;
+      left: 4em;
+    }
+    .carousel-header {
+      margin-bottom: 1em !important;
+    }
+    .carousel {
+      height: 20rem !important;
+    }
+    .indicator-wrapper {
+      margin: 0;
+    }
+    &-step {
+      padding-top: 7rem !important;
+    }
+  }
+
+  .step {
+    &-1-1 {
+      height: 5em !important;
+    }
+    &-1-2 {
+      height: 5em !important;
+    }
+    &-2-1 {
+      height: 5em !important;
+    }
+    &-2-2 {
+      height: 5em !important;
+    }
+    &-3-1 {
+      height: 5em !important;
+    }
+    &-3-2 {
+      height: 5em !important;
+    }
+
+  }
+  .why-maggi {
+    padding: 13em !important;
+    padding-bottom: 0 !important;
+  }
+  .custom-box {
+    &-item {
+      &.right-box {
+        padding-right: 6em !important;
+      }
+      .box-container {
+        &-content{
+          img {
+            margin-bottom: 1em !important;
+            height: 7em;
+          }
+          p {
+            font-size: 1.2rem !important;
+            padding: 0 1.2em !important;
+          }
+        }
+        &.convenience {
+          padding-left: 3em;
+          &-title {
+            margin-top: 1em;
+          }
+          .box-container-content {
+            img {
+              margin-top: 0 !important;
+            }
+            margin-bottom: 3em;
+            margin-top: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .delicious-recipes{
+     &-header {
+      span {
+        font-size: 16px !important;
+      }
+    }
+    &_kari-box {
+      height: 52em !important;
+    }
+    &_ayam-box {
+      height: 52em !important;
+    }
+    &_tomyum-box {
+      height: 52em !important;
+    }
+    .delecious-bowl{
+      height: 9em !important;
+    }
+    &-calories {
+      span {
+        font-size: 18px !important;
+      }
+      &_body {
+        height: 9em !important;
+        &-left {
+          .caloiries {
+            height: 8em !important;
+          }
+        }
+        &-right {
+          padding-top: 1.5em !important;
+          p {
+            margin-top: .5em !important;
+            font-size: .9rem !important;
+            padding: 0 3em !important;
+          }
+          &.multiple {
+            width: 78% !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            p {
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+    }
+    .button-responsive {
+      margin-top: 1em !important;
+      margin-bottom: 4em !important;
+    }
+  }
+}
