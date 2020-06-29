@@ -38,6 +38,16 @@
       background-position-x: right;
       -webkit-transition: background-image 0.2s ease-in-out;
       transition: background-image 0.2s ease-in-out;
+      span {
+        font-family: "AvenirNext";
+        font-size: 1.5em;
+        position: absolute;
+        color: #fff;
+        bottom: 2.6em;
+        left: 8.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
       &.active {
         height: 111%;
         background: url("../../images/layout/carbohydrates.png");
@@ -55,11 +65,22 @@
       background-position-x: right;
       -webkit-transition: background-image 0.2s ease-in-out;
       transition: background-image 0.2s ease-in-out;
+      span {
+        font-family: "AvenirNext";
+        font-size: 1.5em;
+        position: absolute;
+        color: #fff;
+        top: 4.5em;
+        left: 9em;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
       &.active {
         background: url("../../images/layout/protein.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position-x: right;
+
       }
     }
     &-vegetable {
@@ -69,6 +90,16 @@
       background-repeat: no-repeat;
       -webkit-transition: background-image 0.2s ease-in-out;
       transition: background-image 0.2s ease-in-out;
+      span {
+        font-family: "AvenirNext";
+        font-size: 1.5em;
+        position: absolute;
+        color: #fff;
+        top: 6.8em;
+        right: 5.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
       &.active {
         background: url("../../images/layout/vegetable.png");
         background-size: contain;
@@ -78,11 +109,11 @@
     &-full {
       position: absolute;
       background: url("../../images/layout/balanced\ bowl.png");
-      height: 45em;
-      top: 50%;
+      height: 49.5em;
+      top: 51%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
-      width: 45em;
+      width: 51.5em;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

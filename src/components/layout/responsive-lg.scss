@@ -16,7 +16,28 @@
   .main-carousel-balance-bowl {
     height: 40em !important;
     &-full {
-      height: 35em !important;
+      height: 39em !important;
+    }
+    &-carbohydrates {
+      span {
+        font-size: 1.4em !important;
+        bottom: 2.4em !important;
+        left: 7.5em !important;
+      }
+    }
+    &-protein {
+      span {
+        font-size: 1.4em !important;
+        top: 4em !important;
+        left: 8.5em !important;
+      }
+    }
+    &-vegetable {
+       span {
+        font-size: 1.4em !important;
+        top: 5.6em !important;
+        right: 5.5em !important;
+      }
     }
   }
   .main-carousel {
@@ -28,7 +49,7 @@
       margin-bottom: 1em !important;
     }
     .carousel {
-      height: 20rem !important;
+      height: 22rem !important;
     }
     .indicator-wrapper {
       margin: 0;
@@ -122,10 +143,18 @@
         height: 9em !important;
         &-left {
           .caloiries {
-            height: 8em !important;
+            height: 5em !important;
+            margin-top: 1em !important;
+            background-size: contain !important;
           }
         }
         &-right {
+          .noodle {
+            height: 4em !important;
+          }
+          .food-item {
+            height: 4em !important;
+          }
           padding-top: 1.5em !important;
           p {
             margin-top: .5em !important;
@@ -144,8 +173,7 @@
       }
     }
     .button-responsive {
-      margin-top: 1em !important;
-      margin-bottom: 4em !important;
+      margin-bottom: 2em !important;
     }
   }
 }
