@@ -3,6 +3,8 @@
   color: $primary-color;
   font-size: $text-size;
   font-family: Avenir;
+  background-image: url("../../images/make-balanced-bowl/final/bg-op.png");
+  background-size: cover;
   .main-header {
     position: absolute;
     width: 100%;
@@ -11,7 +13,6 @@
   }
   .mbb-main-content {
     min-height: 100vh;
-    background-size: cover;
     .step-content-wrapper {
       max-width: 850px;
       margin: 0 auto;
@@ -204,12 +205,12 @@
         .step-final {
           position: relative;
           .result-img {
-            position: absolute;
-            left: -150px;
-            top: -20px;
-            z-index: 1;
             img {
-              width: 700px;
+              width: 745px;
+              position: absolute;
+              z-index: 1;
+              left: -150px;
+              top: -30px;
             }
           }
           .result-content {
@@ -224,7 +225,43 @@
               background-color: #fffcf5;
               /* align-self: flex-end; */
               margin-top: 20px;
-              padding-bottom: 20px;
+              padding-bottom: 2rem;
+              position: relative;
+              border: 1px solid #5e3266;
+              border-radius: 8px;
+              padding-top: 1rem;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                background-image: url("../../images/make-balanced-bowl/final/tb-bd-top.png");
+                background-size: cover;
+                width: 100%;
+                right: -2px;
+                top: 0px;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                background-image: url("../../images/make-balanced-bowl/final/tb-bd-bottom.png");
+                background-size: cover;
+                width: 100%;
+                right: -3px;
+                bottom: 0px;
+                background-position: center;
+              }
+              .bd-right {
+                position: absolute;
+                height: 99%;
+                background-image: url("../../images/make-balanced-bowl/final/tb-bd-right.png");
+                background-size: cover;
+                width: 2px;
+                right: 0px;
+                bottom: 3px;
+                background-position: bottom;
+              }
+
               .line-content {
                 display: flex;
                 justify-content: flex-end;
@@ -238,19 +275,20 @@
                   .__des {
                     color: #72553c;
                     font-weight: 600;
-                    font-size: 1.125rem;
+                    font-size: 1rem;
                   }
                 }
               }
               .line-title {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
                 padding-right: 50px;
                 align-items: center;
-                margin: 15px 0 10px 0;
+                margin: 15px 0 5px 0;
                 font-weight: 600;
                 color: #5e3266;
-                font-size: 1.25rem;
+                font-size: 1.15rem;
+                padding-left: 50%;
                 &::before {
                   content: "";
                   width: 100px;
@@ -285,8 +323,63 @@
             }
             .result-calc {
               width: 80%;
-              height: 200px;
               background-color: #fffcf5;
+              border: 1px solid #dcc99b;
+              border-radius: 10px;
+              color: #6d5b3a;
+              .row-line {
+                display: flex;
+                .col1 {
+                  width: 200px;
+                  border-right: 1px solid #dcc99b;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                }
+                .col2 {
+                  width: 100%;
+                  &.percent-detail {
+                    display: flex;
+                    flex-wrap: wrap;
+                    div {
+                      width: 50%;
+                      padding: 10px 0;
+                      &:first-child {
+                        border-bottom: 1px solid #dcc99b;
+                        border-right: 1px solid #dcc99b;
+                      }
+                      &:nth-child(2) {
+                        border-bottom: 1px solid #dcc99b;
+                      }
+                      &:nth-child(3) {
+                        border-right: 1px solid #dcc99b;
+                      }
+                    }
+                  }
+                }
+                .cal-number {
+                  display: block;
+                  font-family: AvenirNext;
+                }
+                .per-label {
+                  font-size: 0.75rem;
+                }
+                .kcal {
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                }
+                &.row-title {
+                  background-color: #f2dfb9;
+                  border-bottom: 1px solid #dcc99b;
+                  align-items: center;
+                  font-family: AvenirNext;
+                  .col1 {
+                    padding: 10px 0;
+                  }
+                }
+              }
             }
           }
         }

@@ -228,16 +228,9 @@ export default class MakeBalancedBowlPage extends Component {
   render() {
     return (
       <>
-        <Layout>
+        <Layout bg={this.state.activeStep.id === 4 ? bgImageLarge : bgImage}>
           <SEO title={lang.MAKE_A_BALANCED_BOWL} />
-          <div
-            className="mbb-main-content"
-            style={{
-              backgroundImage: `url(${
-                this.state.activeStep.id === 4 ? bgImageLarge : bgImage
-              })`,
-            }}
-          >
+          <div className="mbb-main-content">
             <div className="step-content-wrapper">
               <div className="step-header">
                 <h1 className="title">{lang.MAKE_YOUR_BALANCED_BOWL}</h1>
