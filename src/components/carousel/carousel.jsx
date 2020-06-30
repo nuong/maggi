@@ -18,7 +18,7 @@ const Full_Bowl = () => {
         MAGGI® noodles and a variety of fresh ingredients for your family from
         the comfort of your own home.
       </p>
-      <p>Swipe right to find out how!</p>
+      <p style={{ fontFamily: 'AvenirNext'}}>Swipe right to find out how!</p>
     </>
   );
 };
@@ -172,14 +172,14 @@ export default class CarouselSection extends React.PureComponent {
                     className={`main-carousel-balance-bowl-protein ${
                       isDisplayProtein ? "active" : ""
                     }`}
-                  ></div>
+                  >{isDisplayProtein ? <span>Protein</span> : null}</div>
                 </div>
                 <div style={{ height: "50%" }}>
                   <div
                     className={`main-carousel-balance-bowl-carbohydrates ${
                       isDisplayCarbon ? "active" : ""
                     }`}
-                  ></div>
+                  >{isDisplayCarbon ? <span>Carbohydrates</span> : null}</div>
                 </div>
               </div>
               <div className="column">
@@ -187,7 +187,7 @@ export default class CarouselSection extends React.PureComponent {
                   className={`main-carousel-balance-bowl-vegetable ${
                     isDisplayVege ? "active" : ""
                   }`}
-                ></div>
+                >{isDisplayVege ? <span>Vegetables</span> : null}</div>
               </div>
               <div className="main-carousel-balance-bowl-full"></div>
             </div>
@@ -211,7 +211,7 @@ export default class CarouselSection extends React.PureComponent {
               ></span>
               <div>
                 <Carousel
-                  autoPlay={true}
+                  autoPlay={false}
                   infiniteLoop
                   swipeable
                   statusFormatter={() => ""}
@@ -276,7 +276,7 @@ export default class CarouselSection extends React.PureComponent {
                 <Link to="/make-balanced-bowl">
                   <button
                     className="btn btn-primary"
-                    style={{ fontSize: "1.25rem" }}
+                    style={{ fontSize: "1.25rem", marginTop: '1em' }}
                   >
                     Make a Balanced Bowl
                   </button>

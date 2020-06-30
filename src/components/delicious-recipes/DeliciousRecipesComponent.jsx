@@ -181,9 +181,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
           </div>
           <Link to="/make-balanced-bowl">
             <button
-              className="btn btn-primary"
-              style={{ marginBottom: "20px" }}
-            >
+              className="btn btn-primary button-responsive">
               Customise your own Balanced Bowl
             </button>
           </Link>
