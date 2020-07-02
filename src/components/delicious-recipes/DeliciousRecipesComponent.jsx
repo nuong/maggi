@@ -48,7 +48,7 @@ const curry_protein = {
   right_image_2: `url(${egg})`,
   left_title: "a fistful",
   right_title_1: "Chicken Breast (boiled and pulled thinly)",
-  right_title_2: "Hard-boil Egg",
+  right_title_2: "Hard-boiled Egg",
   header_title: "Protein",
   color: "#AF3837",
 };
@@ -82,7 +82,7 @@ const chicken_protein = {
   right_image_2: `url(${egg})`,
   left_title: "a fistful",
   right_title_1: "Chicken Breast (sliced thinly)",
-  right_title_2: "Hard-boil Egg",
+  right_title_2: "Hard-boiled Egg",
   header_title: "Protein",
   color: "#7DA03E",
 };
@@ -180,8 +180,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
             </div>
           </div>
           <Link to="/make-balanced-bowl">
-            <button
-              className="btn btn-primary button-responsive">
+            <button className="btn btn-primary button-responsive">
               Customise your own Balanced Bowl
             </button>
           </Link>

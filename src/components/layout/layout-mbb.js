@@ -16,7 +16,7 @@ import "./mbb-style.scss"
 const Layout = ({ children, bg }) => {
 	return (
 		<div className="mbb-wrapper" style={{ 'backgroundImage': `url(${bg})` }}>
-			<Header siteTitle="Make a balanced bowl" />
+			<Header siteTitle="Make a balanced bowl" hideMybb={true} />
 			<main>{children}</main>
 		</div>
 	);

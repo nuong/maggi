@@ -2,7 +2,6 @@
   position: relative;
   color: $primary-color;
   font-size: $text-size;
-  font-family: Avenir;
   background-image: url("../../images/make-balanced-bowl/final/bg-op.png");
   background-size: cover;
   .main-header {
@@ -56,18 +55,34 @@
       .step-content {
         text-align: center;
         width: 100%;
+        position: relative;
+        .hover-hint {
+          position: absolute;
+          left: 100%;
+          display: flex;
+          align-items: center;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: HandOfSean;
+          img {
+            width: 50px;
+          }
+          span {
+            display: block;
+            width: 210px;
+          }
+        }
         .mbb-sub-title {
           font-family: HandOfSean;
           font-size: 2rem;
         }
         .step-dt-header {
-          font-family: Avenir;
+          //   font-family: Avenir;
           font-weight: 500;
           font-size: 1.5rem;
           margin-bottom: 1rem;
         }
         .step-des {
-          font-family: Avenir;
           font-size: 1.5rem;
           margin-bottom: 1.5rem;
           font-weight: 500;
@@ -176,7 +191,7 @@
               background-image: url(../../images/make-balanced-bowl/step2/bg.png);
             }
             img {
-              width: 80px;
+              height: 80px;
             }
             .st-tooltip {
               min-width: 230px;
@@ -391,9 +406,9 @@
   }
 
   .caption {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #646464;
-    font-family: Avenir;
+    // font-family: Avenir;
     margin-top: 1rem;
   }
   .warning-modal {

@@ -4,6 +4,7 @@ import SEO from "../components/layout/seo";
 import CarouselSection from "../components/carousel/carousel";
 import MaggiSection from "../components/maggi-section/MaggiSection";
 import DeliciousRecipes from "../components/delicious-recipes/DeliciousRecipesComponent";
+import ScrollToTop from "../components/layout/scrollToTop";
 class IndexPage extends React.PureComponent {
   render() {
     return (
@@ -12,6 +13,7 @@ class IndexPage extends React.PureComponent {
         <CarouselSection />
         <MaggiSection />
         <DeliciousRecipes />
+        <ScrollToTop />
       </Layout>
     );
   }

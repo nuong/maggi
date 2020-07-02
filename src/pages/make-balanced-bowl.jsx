@@ -7,8 +7,8 @@ import MbbStepTwo from "../components/mbb-steps/mbb-steptwo";
 import MbbStepThree from "../components/mbb-steps/mbb-stepthree";
 import MbbStepFinal from "../components/mbb-steps/mbb-final";
 import WarningModal from "../components/mbb-steps/warning-modal";
-import bgImage from "../images/make-balanced-bowl/mbb-bg-1-op.png";
-import bgImageLarge from "../images/make-balanced-bowl/final/bg-op.png";
+import bgImage from "../images/make-balanced-bowl/mbb-bg-1.jpg";
+import bgImageLarge from "../images/make-balanced-bowl/final/bg-op.jpg";
 
 const STEPS = [
   {
@@ -249,6 +249,15 @@ export default class MakeBalancedBowlPage extends Component {
               </div>
               <div className="step-content">
                 {this.renderStep(this.state.activeStep.id)}
+                {[1, 2, 3].indexOf(this.state.activeStep.id) > -1 ? (
+                  <div className="hover-hint">
+                    <img
+                      src={require("../images/make-balanced-bowl/hint.png")}
+                      alt=""
+                    />
+                    <span>{lang.HOVER_HINT}</span>
+                  </div>
+                ) : null}
               </div>
             </div>
             {this.state.waringModalVisible ? (
