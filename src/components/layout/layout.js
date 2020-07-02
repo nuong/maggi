@@ -27,8 +27,10 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  // if (typeof window === `undefined`) return null;
+  // const height = 3609 - ((1920 - window.innerWidth) * 2);
 	return (
-		<div className="landing-page">
+		<div className="landing-page" style={{height: '100%'}}>
       <div className="landing-page-container">
 				<Header siteTitle={data.site.siteMetadata.title} />
 				<div className="landing-page-container_main-content">
