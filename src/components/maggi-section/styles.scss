@@ -1,14 +1,14 @@
 .why-maggi {
-  padding: 17em;
+  padding: 13em;
   padding-bottom: 0;
   text-align: center;
   &-content {
-    padding: 1em 8em;
+    padding: 1em 5em;
   }
 }
 
 .custom-box {
-  padding-left: 10em;
+  // padding-left: 10em;
   padding-right: 0;
 
   &-item {
@@ -18,7 +18,7 @@
       z-index: 1;
     }
     &.right-box {
-      padding-right: 8em;
+      // padding-right: 8em;
       height: 100%
     }
     .box-container {
@@ -27,18 +27,19 @@
       padding: 2em;
       text-align: center;
       &-header {
-        font-size: 2em;
+        font-size: 1.5em;
         font-family: "HandOfSean";
       }
       &-content{
         img {
+          height: 6em;
           position: relative;
-          margin-bottom: 2em;
+          margin-bottom: .5em;
         }
         p {
-          padding: 0 2.2em;
+          padding: 0 1.2em;
           line-height: 1.3em;
-          font-size: 1.5rem;
+          font-size: 1rem;
         }
       }
     }

@@ -25,7 +25,7 @@ export default class CaloriesComponent extends React.PureComponent {
                   <p>{data.right_title}</p>
                 </> :
                 <>
-                  <div className="columns is-gapless " style={{ padding: '0 10px'}}>
+                  <div className="columns is-gapless ">
                     <div className="column is-6">
                       <div className="food-item" style={{ background: data.right_image_1 }}></div>
                       <p style={{ padding: '0' }}>{data.right_title_1}</p>

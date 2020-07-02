@@ -32,7 +32,7 @@ export default class MaggiSectionComponent extends React.PureComponent {
                 <img src={baseBox} alt="" />
                 <div className="box-container">
                   <p className="box-container-header">Selected Ingredients</p>
-                  <div className="columns">
+                  <div className="columns is-gapless">
                     <div className="column is-6 box-container-content">
                       <img src={icon1} alt="" />
                       <p>

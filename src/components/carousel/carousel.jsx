@@ -13,7 +13,7 @@ const Full_Bowl = () => {
   return (
     <>
       <h1 className="carousel-header">Serve your family Balanced Bowls!</h1>
-      <p style={{ marginBottom: "1em" }}>
+      <p style={{ marginBottom: ".5em", padding: "0 3em"}}>
         This visual guide aims to help you create wholesome Balanced Bowls using
         MAGGI® noodles and a variety of fresh ingredients for your family from
         the comfort of your own home.
@@ -30,18 +30,18 @@ const Step_1 = () => {
       <p>Pick your favourite MAGGI® Noodle as your carbohydrate-of-choice</p>
       <div className="columns steps">
         <span className="steps-equal">=</span>
-        <div className="column is-6-widescreen is-6-fullhd step">
+        <div className="column is-6 step">
           <div className="step-1-1"></div>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <div className="step-1-2"></div>
         </div>
       </div>
       <div className="columns is-gapless">
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">1 fistful</span>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">1 packet</span>
         </div>
       </div>
@@ -53,21 +53,21 @@ const Step_2 = () => {
   return (
     <>
       <h1>Step 2</h1>
-      <p style={{ padding: "0 4em" }}>Pick protein to add to your noodles</p>
+      <p style={{ padding: ".8em 4em" }}>Pick protein to add to your noodles</p>
       <div className="columns steps">
         <span className="steps-equal">=</span>
-        <div className="column is-6-widescreen is-6-fullhd step">
+        <div className="column is-6 step">
           <div className="step-2-1"></div>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <div className="step-2-2"></div>
         </div>
       </div>
       <div className="columns is-gapless">
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">1 palm size</span>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">protein</span>
         </div>
       </div>
@@ -83,20 +83,20 @@ const Step_3 = () => {
       <div className="columns steps">
         <span className="steps-equal">=</span>
         <div
-          className="column is-6-widescreen is-6-fullhd step"
+          className="column is-6 step"
           style={{ padding: ".5em 2em" }}
         >
           <div className="step-3-1"></div>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <div className="step-3-2"></div>
         </div>
       </div>
       <div className="columns is-gapless">
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">1 handful</span>
         </div>
-        <div className="column is-6-widescreen is-6-fullhd">
+        <div className="column is-6">
           <span className="sub-title-custom">vegetables</span>
         </div>
       </div>
@@ -159,8 +159,8 @@ export default class CarouselSection extends React.PureComponent {
     }
     return (
       <div className="main-carousel">
-        <div className="columns">
-          <div className="column is-8-desktop is-8-widescreen is-8-fullhd content">
+        <div className="columns is-gapless">
+          <div className="column is-narrow content">
             <div className="glass-of-water">
               <span>and a glass of water</span>
               <div className="stroke"></div>
@@ -193,7 +193,7 @@ export default class CarouselSection extends React.PureComponent {
             </div>
           </div>
           <div
-            className="column is-4-desktop is-4-widescreen is-4-fullhd"
+            className="column"
             style={{ position: "relative" }}
           >
             <div className="main-carousel-step">
@@ -211,9 +211,9 @@ export default class CarouselSection extends React.PureComponent {
               ></span>
               <div>
                 <Carousel
-                  autoPlay={false}
+                  autoPlay={true}
                   infiniteLoop
-                  swipeable
+
                   statusFormatter={() => ""}
                   showIndicators={false}
                   showArrows={false}
@@ -276,7 +276,7 @@ export default class CarouselSection extends React.PureComponent {
                 <Link to="/make-balanced-bowl">
                   <button
                     className="btn btn-primary"
-                    style={{ fontSize: "1.25rem", marginTop: '1em' }}
+                    style={{ fontSize: "1rem", marginTop: '1em' }}
                   >
                     Make a Balanced Bowl
                   </button>

@@ -16,7 +16,10 @@
     }
   }
   .carousel {
-    height: 25rem;
+    height: 17rem;
+    &-root {
+      width: 25em;
+    }
   }
   .columns {
     margin: 0;
@@ -27,8 +30,8 @@
     position: relative;
   }
   &-balance-bowl {
-    width: 93%;
-    height: 50em;
+    width: 47em;
+    height: 37em;
     position: relative;
     &-carbohydrates {
       height: 100%;
@@ -40,11 +43,11 @@
       transition: background-image 0.2s ease-in-out;
       span {
         font-family: "AvenirNext";
-        font-size: 1.5em;
+        font-size: 1.3em;
         position: absolute;
         color: #fff;
-        bottom: 2.6em;
-        left: 8.5em;
+        bottom: 2em;
+        left: 4em;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
       }
@@ -67,11 +70,11 @@
       transition: background-image 0.2s ease-in-out;
       span {
         font-family: "AvenirNext";
-        font-size: 1.5em;
+        font-size: 1.3em;
         position: absolute;
         color: #fff;
-        top: 4.5em;
-        left: 9em;
+        top: 3.7em;
+        left: 5em;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
       }
@@ -92,11 +95,11 @@
       transition: background-image 0.2s ease-in-out;
       span {
         font-family: "AvenirNext";
-        font-size: 1.5em;
+        font-size: 1.3em;
         position: absolute;
         color: #fff;
-        top: 6.8em;
-        right: 5.5em;
+        top: 5.8em;
+        right: 1.5em;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
       }
@@ -109,11 +112,11 @@
     &-full {
       position: absolute;
       background: url("../../images/layout/balanced\ bowl.png");
-      height: 49.5em;
+      height: 39em;
       top: 51%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
-      width: 51.5em;
+      width: 39em;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -123,37 +126,36 @@
   .left-arrow {
     position: absolute;
     background: url("../../images/layout/left_arrow.png");
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
     top: 50%;
-    left: -6em;
+    left: -1.5em;
     transform: translateY(-50%);
   }
 
   .right-arrow {
     position: absolute;
     background: url("../../images/layout/right_arrow.png");
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
     top: 50%;
-    right: 2em;
+    right: -1em;
     transform: translateY(-50%);
 }
   .indicator-wrapper {
     display: flex;
     justify-content: center;
-    margin: 1em 0;;
     .indicator {
       padding: 0 2px;
-      font-size: 2em;
+      font-size: 1em;
       color: #646464;
       cursor: pointer;
       &:hover {
@@ -177,8 +179,8 @@
   &-step {
     text-align: center;
     height: 100%;
-    padding-top: 7rem;
-    padding-right: 7rem;
+    padding-top: 6rem;
+    // padding-right: 2rem;
     padding-left: 0;
     position: relative;
     .carousel .slide {

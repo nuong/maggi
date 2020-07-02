@@ -12,10 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "bulma/css/bulma.css";
 import "./layout.scss"
-import "./responsive-lg.scss"
-import "./responsive-md-1.scss"
-import "./responsive-md-2.scss"
-import "./responsive-md-3.scss"
+// import "./responsive-lg.scss"
+// import "./responsive-md-1.scss"
+// import "./responsive-md-2.scss"
+// import "./responsive-md-3.scss"
 
 const Layout = ({ children }) => {
 	const data = useStaticQuery(graphql`

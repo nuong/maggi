@@ -1,12 +1,12 @@
 .delicious-recipes{
-  padding: 8em 11em;
+  padding: 9em 0em;
   padding-bottom: 0;
   text-align: center;
   .custom-row {
-    margin: 6em 0;
+    margin: 4em 0;
   }
   &-header {
-    padding: 2em;
+    padding: 1.5em;
     text-align: left;
     color: #fff;
     font-family: "HandOfSean";
@@ -14,7 +14,7 @@
       color: #fff;
     }
     span {
-      font-size: 18px;
+      font-size: 13px;
     }
   }
   .custom-button {
@@ -25,7 +25,7 @@
     border-radius: 20px;
   }
   &_kari-box {
-    height: 62em;
+    height: 45em;
     background: url("../../images/delicious-recipes/red\ base\ box.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,13 +33,13 @@
   }
 
   &_ayam-box {
-    height: 62em;
+    height: 45em;
     background: url("../../images/delicious-recipes/base.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
   &_tomyum-box {
-    height: 62em;
+    height: 45em;
     background: url("../../images/delicious-recipes/purple\ box\ base.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@
 
   .delecious-bowl{
     position: absolute;
-    height: 12em;
+    height: 9em;
     top: 0em;
     right: 0;
   }

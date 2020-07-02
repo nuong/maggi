@@ -11,38 +11,46 @@ body {
 }
 h1 {
   font-family: "HandOfSean";
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2rem;
+  line-height: 3rem;
   margin-bottom: 0.5em;
   font-weight: 500;
   color: $primary-color;
 }
 p {
-  font-size: 1.6rem;
+  font-size: 1em;
+  font-family: Avenir;
+  font-weight: 500;
   margin-bottom: 0.5em;
 }
 
 .landing-page {
+  background: url("../../images/layout/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-position-x: center;
+  margin: auto;
   &-container {
-    background: url("../../images/layout/Maggi\ Website_Homepage_1.psd.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 1920px;
+    // background: url("../../images/layout/Maggi\ Website_Homepage_1.psd.jpg");
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    width: 1140px;
     margin: auto;
   }
 }
 .main-header {
-  padding: 50px;
-  padding-bottom: 30px;
+  padding: 40px 0;
+  padding-bottom: 50px;
   position: relative;
   &_logo {
     position: absolute;
     background: url("../../images/layout/maggi_logo.png");
-    height: 13.5em;
-    width: 13.5em;
+    height: 7.5em;
+    width: 7.5em;
     background-size: contain;
     background-repeat: no-repeat;
-    left: 1.5em;
+    left: 0;
     top: 1.5em;
   }
   &_menu {

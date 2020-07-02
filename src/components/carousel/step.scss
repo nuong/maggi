@@ -11,42 +11,42 @@
   }
   .step {
     &-1-1 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_1_1.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &-1-2 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_1_2.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &-2-1 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_2_1.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &-2-2 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_2_2.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &-3-1 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_3_1.png");
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
     &-3-2 {
-      height: 6em;
+      height: 4em;
       background: url("../../images/Carousel/step_3_2.png");
       background-position: center;
       background-size: contain;
@@ -63,7 +63,9 @@
 }
 
 .description {
-  font-size: 1em;
+  font-size: .8em;
+  padding: 0 2em;
+  margin: .5em 0;
   span {
     cursor: pointer;
     color: #EDA11C;
