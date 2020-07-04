@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-
+import { window } from "browser-monads";
 import "./styles.scss";
 import "./step.scss";
 
@@ -267,7 +267,7 @@ export default class CarouselSection extends React.PureComponent {
                 <p className="description">
                   Serving sizes are just suggested approximate proportions of
                   food you can include on your plate.{" "}
-                  <span>Find out more.</span>
+                  <span onClick={() => {window.open('https://www.maggi.com.my/en/nurturing-a-healthier-future/healthy-eats')}}>Find out more.</span>
                 </p>
                 <Link to="/make-balanced-bowl">
                   <button

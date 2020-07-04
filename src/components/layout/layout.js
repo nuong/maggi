@@ -18,6 +18,10 @@ import "./layout.scss"
 // import "./responsive-md-3.scss"
 
 const Layout = ({ children }) => {
+  require("smooth-scroll")('a[href*="#"]', {
+    speed: 1000,
+    speedAsDuration: true,
+  });
 	const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,6 +31,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  // if (typeof window === `undefined`) return null;
+  // const height = 3609 - ((1920 - window.innerWidth) * 2);
 	return (
 		<div className="landing-page" style={{height: '100%'}}>
       <div className="landing-page-container">

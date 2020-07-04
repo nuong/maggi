@@ -16,7 +16,7 @@ export default class MaggiSectionComponent extends React.PureComponent {
           <h1>Why MAGGI®?</h1>
           <p className="why-maggi-content">
             MAGGI® 2-Minute Noodles are carbohydrate-rich foods like rice,
-            cereal and potato that can be used to paper balanced dishes for your
+            cereal and potato that can be used to prepare balanced dishes for your
             family! Apart from the delicious taste and aroma that you know and
             love, you can also enjoy the following benefits of cooking with
             MAGGI® 2-Minute Noodles:

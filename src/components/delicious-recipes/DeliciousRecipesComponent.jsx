@@ -30,6 +30,7 @@ import cauliflower from "../../images/make-balanced-bowl/step3/3.png";
 import mushroom from "../../images/make-balanced-bowl/step3/10.png";
 
 import Calories from "./component/calories/CaloriesComponent";
+import AOS from "aos";
 
 const curry_carbohydrates = {
   header: `url(${line})`,
@@ -136,13 +137,23 @@ const tomyum_vegetables = {
 export default class DeliciousRecipiesComponent extends React.PureComponent {
   state = {};
 
+  componentDidMount() {
+    AOS.init({
+      offset: 100,
+      duration: 600,
+    });
+  }
+  componentDidUpdate() {
+    AOS.refresh();
+  }
+
   render() {
     return (
       <>
         <div className="delicious-recipes" id="delicious-recipes">
-          <h1>Delicious Recipes</h1>
+          <h1 data-aos="fade-up">Delicious Recipes</h1>
           <div className="columns custom-row">
-            <div className="column is-4" style={{ position: "relative" }}>
+            <div data-aos="zoom-out-right" className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_kari-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>
@@ -154,7 +165,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
               </div>
               <img className="delecious-bowl" src={base1} alt="" />
             </div>
-            <div className="column is-4" style={{ position: "relative" }}>
+            <div data-aos="zoom-out-up" className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_ayam-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>
@@ -166,7 +177,7 @@ export default class DeliciousRecipiesComponent extends React.PureComponent {
               </div>
               <img className="delecious-bowl" src={base2} alt="" />
             </div>
-            <div className="column is-4" style={{ position: "relative" }}>
+            <div data-aos="zoom-out-left" className="column is-4" style={{ position: "relative" }}>
               <div className="delicious-recipes_tomyum-box">
                 <div className="delicious-recipes-header">
                   <span>MAGGI® 2-Minute Noodles</span>

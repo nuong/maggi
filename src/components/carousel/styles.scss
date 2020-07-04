@@ -2,11 +2,11 @@
 
   .glass-of-water {
     position: absolute;
-    top: 40%;
-    left: 5em;
+    top: 35%;
+    left: -10%;
     width: 5em;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: "HandOfSean";
     .stroke {
       background: url("../../images/layout/stroke.png");
@@ -156,7 +156,7 @@
     .indicator {
       padding: 0 2px;
       font-size: 1em;
-      color: #646464;
+      color: #a0a0a0;
       cursor: pointer;
       &:hover {
         color: $active-color;

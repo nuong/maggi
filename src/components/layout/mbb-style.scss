@@ -4,18 +4,21 @@
   font-size: $text-size;
   background-image: url("../../images/make-balanced-bowl/final/bg-op.png");
   background-size: cover;
+  background-position: top;
+  background-position-x: center;
+  &-container {
+    width: 1140px;
+    margin: auto;
+  }
   .main-header {
-    position: absolute;
     width: 100%;
-    top: 0px;
-    left: 0px;
   }
   .mbb-main-content {
     min-height: 100vh;
     .step-content-wrapper {
       max-width: 850px;
       margin: 0 auto;
-      padding-top: 130px;
+      padding-top: 100px;
       .step-header {
         width: 100%;
         height: 185px;
