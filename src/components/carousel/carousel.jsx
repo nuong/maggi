@@ -1,13 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-responsive-carousel";
 
 import "./styles.scss";
 import "./step.scss";
-
-const { Carousel } =
-  typeof window !== `undefined` ? require("react-responsive-carousel") : {};
 
 const Full_Bowl = () => {
   return (
@@ -141,7 +138,6 @@ export default class CarouselSection extends React.PureComponent {
   };
 
   render() {
-    if (typeof window === "undefined") return null;
     let isDisplayProtein = false;
     let isDisplayCarbon = false;
     let isDisplayVege = false;

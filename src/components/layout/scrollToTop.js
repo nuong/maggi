@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { window } from "browser-monads";
 
 export default class ScrollToTop extends Component {
 	checkScrollTimeout = null;
@@ -46,7 +47,6 @@ export default class ScrollToTop extends Component {
 	}
 
 	render() {
-		if (typeof window === "undefined") return null;
 		return (
 			<div className="scroll-top-btn">
 				{
