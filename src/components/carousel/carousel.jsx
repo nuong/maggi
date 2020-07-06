@@ -155,7 +155,7 @@ export default class CarouselSection extends React.PureComponent {
     }
     return (
       <div className="main-carousel">
-        <div className="columns is-gapless">
+        <div className="columns is-gapless custom-mobile">
           <div className="column is-narrow content">
             <div className="glass-of-water">
               <span>and a glass of water</span>
@@ -207,7 +207,7 @@ export default class CarouselSection extends React.PureComponent {
               ></span>
               <div>
                 <Carousel
-                  autoPlay={true}
+                  autoPlay={false}
                   infiniteLoop
 
                   statusFormatter={() => ""}

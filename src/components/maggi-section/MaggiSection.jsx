@@ -22,17 +22,17 @@ export default class MaggiSectionComponent extends React.PureComponent {
             MAGGI® 2-Minute Noodles:
           </p>
         </div>
-        <div className="columns" style={{ margin: 0 }}>
+        <div className="columns custom-mobile" style={{ margin: 0 }}>
           <div
             className="column is-8-desktop is-8-widescreen is-8-fullhd"
-            style={{ width: "64%" }}
+            style={{ width: "64%", margin: 'auto' }}
           >
             <div className="custom-box">
               <div className="custom-box-item">
                 <img src={baseBox} alt="" />
                 <div className="box-container">
                   <p className="box-container-header">Selected Ingredients</p>
-                  <div className="columns is-gapless">
+                  <div className="columns is-gapless custom-mobile">
                     <div className="column is-6 box-container-content">
                       <img src={icon1} alt="" />
                       <p>
@@ -54,14 +54,14 @@ export default class MaggiSectionComponent extends React.PureComponent {
             </div>
           </div>
           <div
-            className="column is-4-desktop is-4-widescreen is-4-fullhd"
+            className="column is-4-desktop is-4-widescreen is-4-fullhd convenience"
             style={{ paddingBottom: "1.5em" }}
           >
             <div
               className="custom-box-item right-box"
             >
               <img src={baseBox2} alt="" style={{ height: "100%" }} />
-              <div className="box-container convenience">
+              <div className="box-container">
                 <p className="convenience-title" className="box-container-header">
                   Convenience
                 </p>
