@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "bulma/css/bulma.css";
 import "./layout.scss"
+import "./responsive-sm-1.scss"
 // import "./responsive-lg.scss"
 // import "./responsive-md-1.scss"
 // import "./responsive-md-2.scss"

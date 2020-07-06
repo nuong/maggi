@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
+import { Carousel } from "react-responsive-carousel";
+import { window } from "browser-monads";
 import "./styles.scss";
 import base1 from "../../images/delicious-recipes/Kari-Bowl.png";
 import base2 from "../../images/delicious-recipes/Ayam-Bowl.png";
@@ -135,61 +137,165 @@ const tomyum_vegetables = {
 };
 
 export default class DeliciousRecipiesComponent extends React.PureComponent {
-  state = {};
+  state = {
+    isMobile: false,
+    currentSlide: 0
+  };
 
   componentDidMount() {
     AOS.init({
       offset: 0,
       duration: 600,
     });
+    if (window.innerWidth <= 1159) {
+      this.setState({
+        isMobile: true
+      })
+    }
+    window.addEventListener('resize', () => {
+      if(window.innerWidth <= 1159) {
+        this.setState({
+          isMobile: true
+        })
+      } else {
+        this.setState({
+          isMobile: false
+        })
+      }
+    });
   }
   componentDidUpdate() {
     AOS.refresh();
   }
 
+  next = () => {
+    const { currentSlide } = this.state;
+    let index = currentSlide + 1;
+    if (currentSlide === 3) {
+      index = 0;
+    }
+    this.setState({
+      currentSlide: index,
+    });
+  };
+
+  prev = () => {
+    const { currentSlide } = this.state;
+    let index = currentSlide - 1;
+    if (currentSlide === 0) {
+      index = 3;
+    }
+    this.setState({
+      currentSlide: index,
+    });
+  };
+
+  updateCurrentSlide = (index) => {
+    const { currentSlide } = this.state;
+
+    if (currentSlide !== index) {
+      this.setState({
+        currentSlide: index,
+      });
+    }
+  };
+
   render() {
+    const {isMobile} = this.state;
     return (
       <>
         <div data-aos="fade-up" className="delicious-recipes" id="delicious-recipes">
           <h1>Delicious Recipes</h1>
-          <div className="columns custom-row">
-            <div data-aos="zoom-out-right" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
-              <div className="delicious-recipes_kari-box">
-                <div className="delicious-recipes-header">
-                  <span>MAGGI® 2-Minute Noodles</span>
-                  <h1>Curry</h1>
+          {
+            !isMobile ?
+              <div className="columns custom-row">
+                <div data-aos="zoom-out-right" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
+                  <div className="delicious-recipes_kari-box">
+                    <div className="delicious-recipes-header">
+                      <span>MAGGI® 2-Minute Noodles</span>
+                      <h1>Curry</h1>
+                    </div>
+                    <Calories data={curry_carbohydrates} />
+                    <Calories data={curry_protein} multiple />
+                    <Calories data={curry_vegetables} multiple />
+                  </div>
+                  <img className="delecious-bowl" src={base1} alt="" />
                 </div>
-                <Calories data={curry_carbohydrates} />
-                <Calories data={curry_protein} multiple />
-                <Calories data={curry_vegetables} multiple />
-              </div>
-              <img className="delecious-bowl" src={base1} alt="" />
-            </div>
-            <div data-aos="zoom-out-up" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
-              <div className="delicious-recipes_ayam-box">
-                <div className="delicious-recipes-header">
-                  <span>MAGGI® 2-Minute Noodles</span>
-                  <h1>Chicken</h1>
+                <div data-aos="zoom-out-up" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
+                  <div className="delicious-recipes_ayam-box">
+                    <div className="delicious-recipes-header">
+                      <span>MAGGI® 2-Minute Noodles</span>
+                      <h1>Chicken</h1>
+                    </div>
+                    <Calories data={chicken_carbohydrates} />
+                    <Calories data={chicken_protein} multiple />
+                    <Calories data={chicken_vegetables} multiple />
+                  </div>
+                  <img className="delecious-bowl" src={base2} alt="" />
                 </div>
-                <Calories data={chicken_carbohydrates} />
-                <Calories data={chicken_protein} multiple />
-                <Calories data={chicken_vegetables} multiple />
-              </div>
-              <img className="delecious-bowl" src={base2} alt="" />
-            </div>
-            <div data-aos="zoom-out-left" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
-              <div className="delicious-recipes_tomyum-box">
-                <div className="delicious-recipes-header">
-                  <span>MAGGI® 2-Minute Noodles</span>
-                  <h1>Tom Yam</h1>
+                <div data-aos="zoom-out-left" data-aos-offset="120" className="column is-4" style={{ position: "relative" }}>
+                  <div className="delicious-recipes_tomyum-box">
+                    <div className="delicious-recipes-header">
+                      <span>MAGGI® 2-Minute Noodles</span>
+                      <h1>Tom Yam</h1>
+                    </div>
+                    <Calories data={tomyum_carbohydrates} />
+                    <Calories data={tomyum_protein} multiple />
+                    <Calories data={tomyum_vegetables} multiple />
+                  </div>
+                  <img className="delecious-bowl" src={base3} alt="" />
                 </div>
-                <Calories data={tomyum_carbohydrates} />
-                <Calories data={tomyum_protein} multiple />
-                <Calories data={tomyum_vegetables} multiple />
+              </div> :
+              <div className="mobile-recipes">
+                <Carousel
+                  autoPlay={true}
+                  infiniteLoop
+                  statusFormatter={() => ""}
+                  showIndicators={false}
+                  showArrows={false}
+                  showThumbs={false}
+                  selectedItem={this.state.currentSlide}
+                  onChange={this.updateCurrentSlide}
+                >
+                  <div key="slide1" className="mobile-recipes-box">
+                    <div className="delicious-recipes_kari-box">
+                      <div className="delicious-recipes-header">
+                        <span>MAGGI® 2-Minute Noodles</span>
+                        <h1>Curry</h1>
+                      </div>
+                      <Calories data={curry_carbohydrates} />
+                      <Calories data={curry_protein} multiple />
+                      <Calories data={curry_vegetables} multiple />
+                    </div>
+                    <img className="delecious-bowl" src={base1} alt="" />
+                  </div>
+                  <div key="slide2">
+                    <div className="delicious-recipes_ayam-box">
+                      <div className="delicious-recipes-header">
+                        <span>MAGGI® 2-Minute Noodles</span>
+                        <h1>Chicken</h1>
+                      </div>
+                      <Calories data={chicken_carbohydrates} />
+                      <Calories data={chicken_protein} multiple />
+                      <Calories data={chicken_vegetables} multiple />
+                    </div>
+                    <img className="delecious-bowl" src={base2} alt="" />
+                  </div>
+                  <div key="slide3">
+                    <div className="delicious-recipes_tomyum-box">
+                      <div className="delicious-recipes-header">
+                        <span>MAGGI® 2-Minute Noodles</span>
+                        <h1>Tom Yam</h1>
+                      </div>
+                      <Calories data={tomyum_carbohydrates} />
+                      <Calories data={tomyum_protein} multiple />
+                      <Calories data={tomyum_vegetables} multiple />
+                    </div>
+                    <img className="delecious-bowl" src={base3} alt="" />
+                  </div>
+                </Carousel>
               </div>
-              <img className="delecious-bowl" src={base3} alt="" />
-            </div>
-          </div>
+          }
           <Link to="/make-balanced-bowl">
             <button className="btn btn-primary button-responsive">
               Customise your own Balanced Bowl
