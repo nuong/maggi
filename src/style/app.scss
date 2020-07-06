@@ -15,6 +15,10 @@
   src: url("/maggi/fonts/AvenirNextLTPro-Regular.otf");
 }
 @font-face {
+  font-family: AvenirBlack;
+  src: url("/maggi/fonts/Avenir-Black.otf");
+}
+@font-face {
   font-family: MyriadPro;
   src: url("/maggi/fonts/MyriadPro-Regular.otf");
 }
@@ -91,4 +95,7 @@ button {
       background: rgba(237, 161, 28, 0.8);
     }
   }
+}
+button {
+  font-family: AvenirBlack !important;
 }
